@@ -1,0 +1,2 @@
+paper_id,title,arxiv_id,year,method_axis,method_evidence,data_axis,data_evidence,claim_axis,claim_evidence,competition_intensity,cite_priority,differentiation_pitch
+arxiv:0000.00000,EXAMPLE PAPER,0000.00000,2025,similar,Both use Transformer with rotary embeddings,overlapping,Same task (long-context QA) different benchmark,adjacent,They claim positional decay; we claim semantic interference,direct,must-cite,Their work varies needle position; ours varies distractor similarity at fixed position

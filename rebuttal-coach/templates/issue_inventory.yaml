@@ -1,0 +1,33 @@
+# Issue Inventory Template (rebuttal-coach v4.0)
+# Output of review_parser_agent
+
+reviewers:
+  - id: r1
+    overall_score: 0
+    confidence: 0
+    summary_stance: ""        # positive | neutral | negative
+
+  - id: r2
+    overall_score: 0
+    confidence: 0
+    summary_stance: ""
+
+issues:
+  - id: issue-001
+    raised_by: []             # list of reviewer ids
+    severity: ""              # critical | major | minor | clarification
+    category: ""              # experimental | conceptual | writing | missing_related | scope
+    affects_score: ""         # yes | no | unclear
+    text: |
+      ""                      # VERBATIM reviewer text
+    location_in_review: ""    # e.g., "R1 Weakness 2"
+    references_paper_section: ""
+
+# Cross-reference summary
+consensus_issues:             # raised by 2+ reviewers; high priority
+  - issue_id: ""
+    raised_by_count: 0
+
+orthogonal_issues:            # raised by only 1 reviewer
+  - issue_id: ""
+    raised_by: ""

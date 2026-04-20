@@ -1,0 +1,42 @@
+venue: iclr
+full_name: International Conference on Learning Representations
+type: conference
+fields: [deep-learning, representation-learning, generative-models, reinforcement-learning]
+deadlines:
+  abstract: late-September
+  full_paper: early-October
+page_limits:
+  main_text: 10
+  references: unlimited
+  appendix: unlimited
+  rebuttal: null
+template:
+  latex_class: iclr
+  bibtex_style: iclr2026_conference
+  template_url: https://github.com/ICLR/Master-Template
+  local_template: iclr_2026.tex
+review_format:
+  num_reviewers: 3
+  scoring_scale: "1-10"
+  required_sections: [summary, strengths, weaknesses, questions, limitations, ethics, soundness, presentation, contribution, overall, confidence]
+  rebuttal_phase: yes
+  rebuttal_word_limit: null
+  notes: "OpenReview platform; rebuttal length is implicit (long thread) but reviewers reward conciseness; aim for 600-1000 words per response."
+disclosure:
+  ai_use_required: yes
+  policy_url: https://iclr.cc/Conferences/2025/CallForPapers
+  required_statement_location: acknowledgments
+  notes: "ICLR follows OpenReview policies; LLM use beyond polishing/coding must be disclosed."
+reproducibility:
+  checklist_required: yes
+  checklist_url: https://iclr.cc/Conferences/2025/AuthorGuide
+  code_release_required: yes
+  notes: "Reproducibility statement is mandatory; code is expected at submission time (anonymized link)."
+broader_impact:
+  required: recommended
+  section_name: Broader Impact
+  notes: "Optional but reviewers note its absence for safety-critical work."
+notes: |
+  - OpenReview public discussion (not double-blind in the traditional sense; reviewers anonymous to authors but discussion threads visible after decision).
+  - Author response phase has multiple rounds with reviewers; engaging with reviewer comments materially affects scores.
+  - Long appendix is normal (50+ pages common); reviewers not required to read all of it.
