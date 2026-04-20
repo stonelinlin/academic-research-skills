@@ -20,18 +20,18 @@ ROOT = Path(__file__).resolve().parents[1]
 ERRORS: list[str] = []
 
 ATOMIC_SKILLS = [
-    "idea-forge",
-    "lit-scout",
-    "related-positioning",
-    "method-architect",
-    "paper-writer",
-    "figure-smith",
-    "integrity-check",
-    "paper-reviewer",
-    "rebuttal-coach",
-    "venue-formatter",
+    "ai-idea-forge",
+    "ai-lit-scout",
+    "ai-related-positioning",
+    "ai-method-architect",
+    "ai-paper-writer",
+    "ai-figure-smith",
+    "ai-integrity-check",
+    "ai-paper-reviewer",
+    "ai-rebuttal-coach",
+    "ai-venue-formatter",
 ]
-META_SKILLS = ["research-pipeline"]
+META_SKILLS = ["ai-research-pipeline"]
 
 EXPECTED_DOCS = [
     "docs/COMMAND_INDEX.md",
@@ -80,8 +80,8 @@ def check_readme_mentions() -> None:
     for skill in ATOMIC_SKILLS:
         if f"`{skill}`" not in text and f"[{skill}]" not in text and f"({skill}/" not in text:
             fail(f"README.md does not reference skill: {skill}")
-    if "v4.0" not in text:
-        fail("README.md does not declare v4.0 version")
+    if not re.search(r"v4\.\d+", text):
+        fail("README.md does not declare a v4.x version")
 
 
 def check_changelog() -> None:
@@ -90,8 +90,8 @@ def check_changelog() -> None:
         fail("CHANGELOG.md missing")
         return
     text = changelog.read_text(encoding="utf-8")
-    if "[4.0.0]" not in text:
-        fail("CHANGELOG.md missing [4.0.0] entry")
+    if "[4.1.0]" not in text and "[4.0.0]" not in text:
+        fail("CHANGELOG.md missing [4.1.0] or [4.0.0] entry")
 
 
 def check_docs_exist() -> None:

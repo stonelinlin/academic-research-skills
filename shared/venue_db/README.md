@@ -1,10 +1,10 @@
 # venue_db — AI/ML Conference Knowledge Base
 
 YAML-formatted knowledge base for major AI/ML venues. Consumed by:
-- `venue-formatter` (template + page limits + disclosure policy)
-- `paper-reviewer` (reviewer expectations + scoring rubric)
-- `rebuttal-coach` (response word limits + author response phase rules)
-- `idea-forge` (recent accept trends — needs runtime arxiv lookup)
+- `ai-venue-formatter` (template + page limits + disclosure policy)
+- `ai-paper-reviewer` (reviewer expectations + scoring rubric)
+- `ai-rebuttal-coach` (response word limits + author response phase rules)
+- `ai-idea-forge` (recent accept trends — needs runtime arxiv lookup)
 
 ## Schema
 

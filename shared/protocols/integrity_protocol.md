@@ -4,22 +4,22 @@
 
 ## Scope
 
-Citation, claim, data, and reproducibility verification. Used by `integrity-check` skill (primary consumer) and invoked optionally by `paper-reviewer` and `rebuttal-coach`.
+Citation, claim, data, and reproducibility verification. Used by `ai-integrity-check` skill (primary consumer) and invoked optionally by `ai-paper-reviewer` and `ai-rebuttal-coach`.
 
 ## Component References
 
 | Concern | Authoritative Reference | Owned by |
 |---|---|---|
-| 5-phase citation/claim verification | [`archive/v3/academic-pipeline/references/integrity_review_protocol.md`](../../archive/v3/academic-pipeline/references/integrity_review_protocol.md) | integrity-check |
-| 7-mode AI research failure checklist | [`archive/v3/academic-pipeline/references/ai_research_failure_modes.md`](../../archive/v3/academic-pipeline/references/ai_research_failure_modes.md) | integrity-check + paper-reviewer |
-| Claim extraction & source tracing | [`archive/v3/academic-pipeline/references/claim_verification_protocol.md`](../../archive/v3/academic-pipeline/references/claim_verification_protocol.md) | integrity-check |
-| Plagiarism / self-plagiarism / AI-text detection | [`archive/v3/academic-pipeline/references/plagiarism_detection_protocol.md`](../../archive/v3/academic-pipeline/references/plagiarism_detection_protocol.md) | integrity-check |
-| Semantic Scholar API verification | [`archive/v3/deep-research/references/semantic_scholar_api_protocol.md`](../../archive/v3/deep-research/references/semantic_scholar_api_protocol.md) | lit-scout + integrity-check |
-| Anti-leakage (knowledge isolation) | [`archive/v3/academic-paper/references/anti_leakage_protocol.md`](../../archive/v3/academic-paper/references/anti_leakage_protocol.md) | paper-writer |
-| VLM figure verification | [`archive/v3/academic-paper/references/vlm_figure_verification.md`](../../archive/v3/academic-paper/references/vlm_figure_verification.md) | figure-smith |
-| Reproducibility audit | [`archive/v3/academic-pipeline/references/reproducibility_audit.md`](../../archive/v3/academic-pipeline/references/reproducibility_audit.md) | integrity-check |
-| Material Passport schema | [`shared/handoff_schemas.md`](../handoff_schemas.md) Schema 9 | integrity-check |
-| Repro lock | [`shared/artifact_reproducibility_pattern.md`](../artifact_reproducibility_pattern.md) | integrity-check |
+| 5-phase citation/claim verification | [`archive/v3/academic-pipeline/references/integrity_review_protocol.md`](../../archive/v3/academic-pipeline/references/integrity_review_protocol.md) | ai-integrity-check |
+| 7-mode AI research failure checklist | [`archive/v3/academic-pipeline/references/ai_research_failure_modes.md`](../../archive/v3/academic-pipeline/references/ai_research_failure_modes.md) | ai-integrity-check + ai-paper-reviewer |
+| Claim extraction & source tracing | [`archive/v3/academic-pipeline/references/claim_verification_protocol.md`](../../archive/v3/academic-pipeline/references/claim_verification_protocol.md) | ai-integrity-check |
+| Plagiarism / self-plagiarism / AI-text detection | [`archive/v3/academic-pipeline/references/plagiarism_detection_protocol.md`](../../archive/v3/academic-pipeline/references/plagiarism_detection_protocol.md) | ai-integrity-check |
+| Semantic Scholar API verification | [`archive/v3/deep-research/references/semantic_scholar_api_protocol.md`](../../archive/v3/deep-research/references/semantic_scholar_api_protocol.md) | ai-lit-scout + ai-integrity-check |
+| Anti-leakage (knowledge isolation) | [`archive/v3/academic-paper/references/anti_leakage_protocol.md`](../../archive/v3/academic-paper/references/anti_leakage_protocol.md) | ai-paper-writer |
+| VLM figure verification | [`archive/v3/academic-paper/references/vlm_figure_verification.md`](../../archive/v3/academic-paper/references/vlm_figure_verification.md) | ai-figure-smith |
+| Reproducibility audit | [`archive/v3/academic-pipeline/references/reproducibility_audit.md`](../../archive/v3/academic-pipeline/references/reproducibility_audit.md) | ai-integrity-check |
+| Material Passport schema | [`shared/handoff_schemas.md`](../handoff_schemas.md) Schema 9 | ai-integrity-check |
+| Repro lock | [`shared/artifact_reproducibility_pattern.md`](../artifact_reproducibility_pattern.md) | ai-integrity-check |
 
 ## Two Modes
 
@@ -38,7 +38,7 @@ If ANY of the 7 failure modes is `SUSPECTED`, or Modes 1/3/5/6 are `INSUFFICIENT
 
 ## v4.0 Atomic Invocation
 
-Unlike v3, where integrity ran only inside the pipeline at Stage 2.5/4.5, v4.0 lets users invoke `integrity-check` directly:
+Unlike v3, where integrity ran only inside the pipeline at Stage 2.5/4.5, v4.0 lets users invoke `ai-integrity-check` directly:
 
 ```
 "Check citations in this paper"

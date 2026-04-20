@@ -43,7 +43,7 @@ When detected:
 
 ## Reporting
 
-Every skill that uses adversarial agents (`paper-reviewer`, `idea-forge`, `rebuttal-coach`, `integrity-check`) MUST log:
+Every skill that uses adversarial agents (`ai-paper-reviewer`, `ai-idea-forge`, `ai-rebuttal-coach`, `ai-integrity-check`) MUST log:
 
 ```yaml
 anti_sycophancy_audit:

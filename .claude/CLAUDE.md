@@ -2,6 +2,8 @@
 
 A suite of Claude Code skills for rigorous academic research, paper writing, peer review, and pipeline orchestration.
 
+> **v4.1+ (current):** Atomic AI/ML skills use top-level directories named `ai-*` (`ai-idea-forge`, `ai-lit-scout`, … — see repository [`README.md`](../README.md)). Install each as `~/.claude/skills/<name>/` (flat symlinks). v3.3 legacy content is under [`archive/v3/`](../archive/v3/).
+
 ## Skills Overview
 
 | Skill | Purpose | Key Modes |

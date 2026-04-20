@@ -17,7 +17,7 @@ from pathlib import Path
 from _skill_lint import iter_skill_files
 
 DEFAULT_LIMIT = 250
-META_SKILLS = frozenset({"research-pipeline"})
+META_SKILLS = frozenset({"ai-research-pipeline"})
 META_LIMIT = 250
 
 

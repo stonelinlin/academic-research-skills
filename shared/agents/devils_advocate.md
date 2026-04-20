@@ -1,19 +1,19 @@
 # devils_advocate (shared)
 
-**Role**: Adversarial critic. Stress-tests ideas, claims, methods, and rebuttals by actively constructing the strongest counter-argument. Used by `idea-forge`, `paper-reviewer`, `rebuttal-coach`, and `integrity-check`.
+**Role**: Adversarial critic. Stress-tests ideas, claims, methods, and rebuttals by actively constructing the strongest counter-argument. Used by `ai-idea-forge`, `ai-paper-reviewer`, `ai-rebuttal-coach`, and `ai-integrity-check`.
 
 **Status**: v4.0 — Consolidated from `archive/v3/deep-research/agents/devils_advocate_agent.md` and `archive/v3/academic-paper-reviewer/agents/devils_advocate_reviewer_agent.md`.
 
 ## Activation
 
 Always invoked at:
-- `idea-forge` — after each idea card is generated
-- `paper-reviewer` — as the 5th reviewer
-- `rebuttal-coach` — to predict reviewer counter-arguments
+- `ai-idea-forge` — after each idea card is generated
+- `ai-paper-reviewer` — as the 5th reviewer
+- `ai-rebuttal-coach` — to predict reviewer counter-arguments
 
 Optionally invoked when:
 - User asks for a "stress test" or "what could go wrong"
-- `integrity-check` flags a claim as borderline
+- `ai-integrity-check` flags a claim as borderline
 
 ## Core Stance
 
@@ -67,7 +67,7 @@ This protocol is shared with `shared/protocols/anti_sycophancy.md`.
 
 - **Don't generic-critique**: "needs more experiments" is useless; specify which experiment and what it would prove
 - **Don't pile on**: one strong attack > five weak ones; pick the strongest and defend it
-- **Don't simulate the author's response**: stay in the attacker role; let `rebuttal-coach` simulate the defense
+- **Don't simulate the author's response**: stay in the attacker role; let `ai-rebuttal-coach` simulate the defense
 
 ## See Also
 

@@ -6,9 +6,9 @@
 
 ## When to use
 
-- User runs `idea-forge` and wants to come back later to refine ideas
+- User runs `ai-idea-forge` and wants to come back later to refine ideas
 - A skill spans multiple turns and the user pauses
-- Two skills hand off (e.g., `lit-scout` → `paper-writer` reusing the bibliography)
+- Two skills hand off (e.g., `ai-lit-scout` → `ai-paper-writer` reusing the bibliography)
 
 ## Storage
 
@@ -16,8 +16,8 @@ State files live in `.ars-state/` at the project root (gitignored by default). E
 
 ```
 .ars-state/
-├── session-20260420-1431-idea-forge.yaml
-├── session-20260420-1502-lit-scout.yaml
+├── session-20260420-1431-ai-idea-forge.yaml
+├── session-20260420-1502-ai-lit-scout.yaml
 └── session-active.yaml          # symlink to most recent
 ```
 
@@ -44,7 +44,7 @@ next_skill_recommended: <name|null>
 
 ## Resume Pattern
 
-User says: `resume session-20260420-1431-idea-forge` (or just `resume` for most recent)
+User says: `resume session-20260420-1431-ai-idea-forge` (or just `resume` for most recent)
 
 The calling skill:
 1. Reads the YAML

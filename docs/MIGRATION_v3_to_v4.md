@@ -8,57 +8,57 @@ v4.0 is a **BREAKING release**. This guide maps the old structure to the new one
 - 24 explicit modes → **0 explicit modes** (sub-modes auto-detected from inputs)
 - General academic (HEI default) → **AI/ML specialized** (NeurIPS/ICLR default)
 - 547-line SKILL.md → **≤200-line SKILL.md per atomic skill** (CI enforced post-migration)
-- 7-10 mandatory checkpoints → **3 mandatory in `research-pipeline` (optional skill)**
+- 7-10 mandatory checkpoints → **3 mandatory in `ai-research-pipeline` (optional skill)**
 
 ## Skill Mapping
 
 | v3.3 skill / mode | v4.0 atomic skill | Notes |
 |---|---|---|
-| `deep-research full` | `lit-scout` (comprehensive) + `idea-forge` + `method-architect` | Split by intent |
-| `deep-research quick` | `lit-scout` (quick) | Just literature |
-| `deep-research lit-review` | `lit-scout` (standard or comprehensive) | Direct mapping |
-| `deep-research fact-check` | `integrity-check` | Promoted to first-class skill |
-| `deep-research socratic` | shared/agents/socratic_mentor invoked by `idea-forge` / `lit-scout` | No longer a mode |
-| `deep-research systematic-review` | `lit-scout` (comprehensive) + `integrity-check` | Composition |
-| `deep-research paper-review` | `paper-reviewer` (mode: full) | Direct mapping |
-| `academic-paper full` | `paper-writer` + `figure-smith` + `venue-formatter` | Split by deliverable |
-| `academic-paper plan` | `paper-writer` (outline mode) | Auto-detected |
-| `academic-paper outline` | `paper-writer` (outline mode) | Same |
-| `academic-paper revision` | `paper-writer` (revise mode) | Auto-detected from `existing_draft` |
-| `academic-paper revision-coach` | `paper-writer` (polish mode) + Socratic | Auto-detected |
-| `academic-paper abstract` | `paper-writer` with `section: abstract` | Just an input |
-| `academic-paper lit-review` | `lit-scout` + `paper-writer` | Composition |
-| `academic-paper format-convert` | `venue-formatter` | Direct mapping |
-| `academic-paper citation-check` | `integrity-check` | Promoted |
-| `academic-paper disclosure` | `venue-formatter` (disclosure block) | Folded in |
-| `academic-paper-reviewer full` | `paper-reviewer` (mode: full) | Direct |
-| `academic-paper-reviewer quick` | `paper-reviewer` (mode: quick) | Direct |
-| `academic-paper-reviewer methodology-focus` | `paper-reviewer` (mode: methodology-focus) | Direct |
-| `academic-paper-reviewer re-review` | `paper-reviewer` (mode: re-review) | Direct |
-| `academic-paper-reviewer socratic-guided` | `paper-reviewer` invoking shared/socratic | Direct |
-| `academic-paper-reviewer calibration` | `paper-reviewer` (mode: calibration) | Direct |
-| `academic-pipeline` (full) | `research-pipeline` | Demoted to optional meta-skill |
+| `deep-research full` | `ai-lit-scout` (comprehensive) + `ai-idea-forge` + `ai-method-architect` | Split by intent |
+| `deep-research quick` | `ai-lit-scout` (quick) | Just literature |
+| `deep-research lit-review` | `ai-lit-scout` (standard or comprehensive) | Direct mapping |
+| `deep-research fact-check` | `ai-integrity-check` | Promoted to first-class skill |
+| `deep-research socratic` | shared/agents/socratic_mentor invoked by `ai-idea-forge` / `ai-lit-scout` | No longer a mode |
+| `deep-research systematic-review` | `ai-lit-scout` (comprehensive) + `ai-integrity-check` | Composition |
+| `deep-research paper-review` | `ai-paper-reviewer` (mode: full) | Direct mapping |
+| `academic-paper full` | `ai-paper-writer` + `ai-figure-smith` + `ai-venue-formatter` | Split by deliverable |
+| `academic-paper plan` | `ai-paper-writer` (outline mode) | Auto-detected |
+| `academic-paper outline` | `ai-paper-writer` (outline mode) | Same |
+| `academic-paper revision` | `ai-paper-writer` (revise mode) | Auto-detected from `existing_draft` |
+| `academic-paper revision-coach` | `ai-paper-writer` (polish mode) + Socratic | Auto-detected |
+| `academic-paper abstract` | `ai-paper-writer` with `section: abstract` | Just an input |
+| `academic-paper lit-review` | `ai-lit-scout` + `ai-paper-writer` | Composition |
+| `academic-paper format-convert` | `ai-venue-formatter` | Direct mapping |
+| `academic-paper citation-check` | `ai-integrity-check` | Promoted |
+| `academic-paper disclosure` | `ai-venue-formatter` (disclosure block) | Folded in |
+| `academic-paper-reviewer full` | `ai-paper-reviewer` (mode: full) | Direct |
+| `academic-paper-reviewer quick` | `ai-paper-reviewer` (mode: quick) | Direct |
+| `academic-paper-reviewer methodology-focus` | `ai-paper-reviewer` (mode: methodology-focus) | Direct |
+| `academic-paper-reviewer re-review` | `ai-paper-reviewer` (mode: re-review) | Direct |
+| `academic-paper-reviewer socratic-guided` | `ai-paper-reviewer` invoking shared/socratic | Direct |
+| `academic-paper-reviewer calibration` | `ai-paper-reviewer` (mode: calibration) | Direct |
+| `academic-pipeline` (full) | `ai-research-pipeline` | Demoted to optional meta-skill |
 
 ## New in v4.0 (no v3.3 equivalent)
 
 | Skill | Why new |
 |---|---|
-| `idea-forge` | Idea generation was buried in `deep-research` socratic mode; now first-class |
-| `related-positioning` | Positioning was implicit in `paper-writer` lit-review; now explicit + threat-model |
-| `rebuttal-coach` | Rebuttal handling was missing entirely from v3.3 |
+| `ai-idea-forge` | Idea generation was buried in `deep-research` socratic mode; now first-class |
+| `ai-related-positioning` | Positioning was implicit in `ai-paper-writer` lit-review; now explicit + threat-model |
+| `ai-rebuttal-coach` | Rebuttal handling was missing entirely from v3.3 |
 
 ## Data / Output Mapping
 
 | v3.3 artifact | v4.0 artifact | Location |
 |---|---|---|
-| `intake_brief.yaml` | Per-skill intake (`idea-forge.intake`, `lit-scout.intake`, etc.) | Per-skill state |
-| `RQ_brief.yaml` | `idea-forge` Idea Card + `method-architect` hypothesis | Various |
-| `annotated_bibliography.yaml` | `lit-scout` output (same name) | `lit-scout` |
-| `material_passport.yaml` | `integrity-check` Material Passport | `integrity-check` |
-| `integrity_audit.yaml` | `integrity-check` audit_report | `integrity-check` |
-| `paper_draft.tex` | `paper-writer` section drafts → `venue-formatter` compile | Sequential |
-| `review_report.yaml` | `paper-reviewer` reports | `paper-reviewer` |
-| `rebuttal.md` | `rebuttal-coach` per-reviewer drafts | `rebuttal-coach` |
+| `intake_brief.yaml` | Per-skill intake (`ai-idea-forge.intake`, `ai-lit-scout.intake`, etc.) | Per-skill state |
+| `RQ_brief.yaml` | `ai-idea-forge` Idea Card + `ai-method-architect` hypothesis | Various |
+| `annotated_bibliography.yaml` | `ai-lit-scout` output (same name) | `ai-lit-scout` |
+| `material_passport.yaml` | `ai-integrity-check` Material Passport | `ai-integrity-check` |
+| `integrity_audit.yaml` | `ai-integrity-check` audit_report | `ai-integrity-check` |
+| `paper_draft.tex` | `ai-paper-writer` section drafts → `ai-venue-formatter` compile | Sequential |
+| `review_report.yaml` | `ai-paper-reviewer` reports | `ai-paper-reviewer` |
+| `rebuttal.md` | `ai-rebuttal-coach` per-reviewer drafts | `ai-rebuttal-coach` |
 
 ## Domain Changes
 
@@ -76,7 +76,7 @@ v4.0 is a **BREAKING release**. This guide maps the old structure to the new one
 |---|---|
 | `MODE_REGISTRY.md` | No more explicit modes |
 | `POSITIONING.md` (skill positioning) | Folded into README + COMMAND_INDEX |
-| `docs/ARCHITECTURE.md` (full pipeline arch) | Pipeline is optional now; arch in `research-pipeline/SKILL.md` |
+| `docs/ARCHITECTURE.md` (full pipeline arch) | Pipeline is optional now; arch in `ai-research-pipeline/SKILL.md` |
 | Most "case study" / "policy brief" templates | Out of AI/ML scope |
 | HEI-specific examples and vocab | Out of AI/ML scope |
 | `socratic_mentor_agent.md` (×2 copies in deep-research and academic-paper) | Consolidated to `shared/agents/socratic_mentor.md` |
@@ -85,7 +85,7 @@ v4.0 is a **BREAKING release**. This guide maps the old structure to the new one
 ## Backward Compatibility (6-month window)
 
 Until 2026-10:
-- v3.3 top-level skills (`deep-research`, `academic-paper`, `academic-paper-reviewer`, `academic-pipeline`) remain as **read-only references**. Their agent files are still pointed to by v4.0 atomic skills (e.g., `lit-scout` references `archive/v3/deep-research/agents/bibliography_agent.md`).
+- v3.3 top-level skills (`deep-research`, `academic-paper`, `academic-paper-reviewer`, `academic-pipeline`) remain as **read-only references**. Their agent files are still pointed to by v4.0 atomic skills (e.g., `ai-lit-scout` references `archive/v3/deep-research/agents/bibliography_agent.md`).
 - v3.3 trigger phrases like "deep research" or "academic paper" will route to the closest v4.0 atomic skill with a one-line migration notice.
 - After 2026-10, v3.3 directories will be moved to `legacy/` and triggers removed.
 

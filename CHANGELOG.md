@@ -2,26 +2,36 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.1.0] - 2026-04-20 — BREAKING (directory naming)
+
+All **v4 atomic skill directories** and each `SKILL.md` frontmatter `name:` field now use a uniform **`ai-` prefix** (e.g. `idea-forge` → `ai-idea-forge`, `lit-scout` → `ai-lit-scout`, …, `research-pipeline` → `ai-research-pipeline`). This namespaces skills when installed as direct children of `~/.claude/skills/` or `~/.cursor/skills/` and avoids collisions with unrelated folders.
+
+**Migration**: Remove old symlinks (`idea-forge`, `lit-scout`, …) and re-run the `for s in ai-idea-forge …` loop in `README.md`. Legacy v3 paths under `archive/v3/` are unchanged (`academic-paper-reviewer`, not prefixed).
+
+**Note**: A naive substring replace of `paper-reviewer` would corrupt `academic-paper-reviewer`; repo content uses the correct archive path `archive/v3/academic-paper-reviewer/`.
+
 ## [4.0.0] - 2026-04-20 — BREAKING
 
 **Major restructuring**: `academic-research-skills` is renamed to `ai-research-skills`. The 4 large skills × 24 modes architecture is replaced by 10 atomic AI/ML-specialized skills + 1 optional meta-skill, callable via natural language without explicit mode flags.
 
 ### Added — 10 Atomic Skills
 
-- **`idea-forge`** (NEW) — AI/ML research idea generation with novelty/feasibility/risk scoring and Devil's Advocate stress-testing. Outputs ranked Idea Cards.
-- **`lit-scout`** — Literature search, verification (Semantic Scholar / arXiv), annotated bibliography. Wraps `archive/v3/deep-research/agents/bibliography_agent`.
-- **`related-positioning`** (NEW) — Differentiate AI/ML work via 3-axis positioning matrix + reviewer-threat map + Related Work section draft.
-- **`method-architect`** — Experimental design (hypotheses, conditions, baselines, controls, statistical plan, ablations, reproducibility spec). Wraps `archive/v3/deep-research/agents/research_architect_agent`.
-- **`paper-writer`** — Section drafting with anti-leakage protocol and venue-aware style. Wraps `archive/v3/academic-paper/agents/draft_writer_agent` + `revision_coach_agent` + `abstract_bilingual_agent`.
-- **`figure-smith`** — Reproducible figure code (matplotlib/tikz/mermaid) + VLM verification + alt text. Wraps `archive/v3/academic-paper/agents/visualization_agent`.
-- **`integrity-check`** — Citation, claim, plagiarism, 7-mode AI failure-mode audit. Block-on-suspect verdict. Wraps `archive/v3/academic-pipeline/agents/integrity_verification_agent`.
-- **`paper-reviewer`** — 5-perspective AI venue peer review (Methodology / Domain / Perspective / DA / EIC) in venue's review format. Wraps existing `archive/v3/academic-paper-reviewer/agents/`.
-- **`rebuttal-coach`** (NEW) — OpenReview-style author response with priority matrix, per-reviewer drafts within venue word limits, revision plan, auditor.
-- **`venue-formatter`** — Venue-compliant compilation + disclosure + reproducibility checklist + broader impact + camera-ready helper. Wraps `archive/v3/academic-paper/agents/formatter_agent`.
+> **Historical note:** v4.0.0 initially shipped directories `idea-forge`, `lit-scout`, … (no `ai-` prefix). v4.1.0 renames them to `ai-idea-forge`, `ai-lit-scout`, … The capability list below uses the **current** names.
+
+- **`ai-idea-forge`** (NEW) — AI/ML research idea generation with novelty/feasibility/risk scoring and Devil's Advocate stress-testing. Outputs ranked Idea Cards.
+- **`ai-lit-scout`** — Literature search, verification (Semantic Scholar / arXiv), annotated bibliography. Wraps `archive/v3/deep-research/agents/bibliography_agent`.
+- **`ai-related-positioning`** (NEW) — Differentiate AI/ML work via 3-axis positioning matrix + reviewer-threat map + Related Work section draft.
+- **`ai-method-architect`** — Experimental design (hypotheses, conditions, baselines, controls, statistical plan, ablations, reproducibility spec). Wraps `archive/v3/deep-research/agents/research_architect_agent`.
+- **`ai-paper-writer`** — Section drafting with anti-leakage protocol and venue-aware style. Wraps `archive/v3/academic-paper/agents/draft_writer_agent` + `revision_coach_agent` + `abstract_bilingual_agent`.
+- **`ai-figure-smith`** — Reproducible figure code (matplotlib/tikz/mermaid) + VLM verification + alt text. Wraps `archive/v3/academic-paper/agents/visualization_agent`.
+- **`ai-integrity-check`** — Citation, claim, plagiarism, 7-mode AI failure-mode audit. Block-on-suspect verdict. Wraps `archive/v3/academic-pipeline/agents/integrity_verification_agent`.
+- **`ai-paper-reviewer`** — 5-perspective AI venue peer review (Methodology / Domain / Perspective / DA / EIC) in venue's review format. Wraps existing `archive/v3/academic-paper-reviewer/agents/`.
+- **`ai-rebuttal-coach`** (NEW) — OpenReview-style author response with priority matrix, per-reviewer drafts within venue word limits, revision plan, auditor.
+- **`ai-venue-formatter`** — Venue-compliant compilation + disclosure + reproducibility checklist + broader impact + camera-ready helper. Wraps `archive/v3/academic-paper/agents/formatter_agent`.
 
 ### Added — Optional Meta-Skill
 
-- **`research-pipeline`** — End-to-end orchestration with **3 mandatory checkpoints** (down from 7-10 in v3.3). Demoted from primary entry point to optional convenience.
+- **`ai-research-pipeline`** — End-to-end orchestration with **3 mandatory checkpoints** (down from 7-10 in v3.3). Demoted from primary entry point to optional convenience.
 
 ### Added — Shared Layer
 
@@ -53,7 +63,7 @@ All notable changes to this project will be documented in this file.
 - **Default paper structure**: IMRaD → Method-Experiments-RelatedWork-Discussion.
 - **Bilingual abstracts**: mandatory → optional (English default for AI venues).
 - **Mode selection**: 24 explicit modes → 0 explicit modes (auto-detected sub-modes per skill).
-- **Checkpoint cadence**: 7-10 mandatory in `academic-pipeline` → 3 mandatory in `research-pipeline` (now optional).
+- **Checkpoint cadence**: 7-10 mandatory in `academic-pipeline` → 3 mandatory in `ai-research-pipeline` (now optional).
 - **SKILL.md length**: 329-547 lines → ≤250 lines (CI-enforced for v4.0 skills).
 
 ### Deprecated (kept until 2026-10)

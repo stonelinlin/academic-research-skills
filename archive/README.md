@@ -33,7 +33,7 @@ social sciences, higher-education research, etc.
 ### Why these are still here
 
 1. **Agent reuse.** Some v4 atomic skills delegate to specific v3 agents
-   (e.g., `lit-scout` → `archive/v3/deep-research/agents/bibliography_agent.md`).
+   (e.g., `ai-lit-scout` → `archive/v3/deep-research/agents/bibliography_agent.md`).
    See [`docs/MIGRATION_v3_to_v4.md`](../docs/MIGRATION_v3_to_v4.md) for the full mapping.
 2. **Migration window.** Users of v3.3.6 have until **2026-10** to migrate.
 3. **Historical reference.** Showcase PDFs and design specs document how the project
