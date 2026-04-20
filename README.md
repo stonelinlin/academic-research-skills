@@ -32,16 +32,30 @@
 
 ai-research-skills 是纯 Markdown skill 集合，没有运行时依赖（lint 脚本除外）。
 
-### Claude Code / Cursor（推荐）
+### Claude Code（重要：两层目录）
+
+Claude Code **只**扫描形如 `~/.claude/skills/<skill-name>/SKILL.md` 的路径（**两层**：`skills` → `skill-name` → `SKILL.md`）。  
+若把整个仓库放在 `~/.claude/skills/academic-research-skills/`，skill 实际在第三层 `.../idea-forge/SKILL.md`，**不会被自动发现**。
+
+**正确做法**：把本仓库里每个 skill 目录单独链到 `~/.claude/skills/` 下（11 个：10 个原子 + `research-pipeline`）：
 
 ```bash
-cd /path/to/your/project
-mkdir -p .claude/skills
-git clone https://github.com/Imbad0202/academic-research-skills.git \
-  .claude/skills/ai-research-skills
+REPO=/path/to/academic-research-skills   # 或你的 git clone 路径
+mkdir -p ~/.claude/skills
+for s in idea-forge lit-scout related-positioning method-architect paper-writer \
+         figure-smith integrity-check paper-reviewer rebuttal-coach venue-formatter \
+         research-pipeline; do
+  ln -sf "$REPO/$s" "$HOME/.claude/skills/$s"
+done
 ```
 
-启动 Claude Code 后，自然语言触发即可。
+可选：保留 `~/.claude/skills/academic-research-skills -> $REPO` 方便你 `cd` 进整仓，但它**不是**一个 skill（根目录没有 `SKILL.md`），不能替代上面的 11 个链接。
+
+改完后**完全退出并重启** Claude Code，再试自然语言触发（例如「想几个 long-context 的 idea」→ `idea-forge`）。
+
+### Cursor
+
+Cursor 使用 `~/.cursor/skills/<skill-name>/` 或项目内 `.cursor/skills/`；同样要求 **每个 skill 为一级子目录**。可用与上面相同的 `for` 循环，把目标目录换成 `~/.cursor/skills`。
 
 ### 手动安装到其他 Agent
 
