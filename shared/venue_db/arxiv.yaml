@@ -1,0 +1,40 @@
+venue: arxiv
+full_name: arXiv Preprint Server
+type: preprint
+fields: [all]
+deadlines:
+  abstract: rolling
+  full_paper: rolling
+page_limits:
+  main_text: unlimited
+  references: unlimited
+  appendix: unlimited
+  rebuttal: null
+template:
+  latex_class: any
+  bibtex_style: any
+  template_url: https://arxiv.org/help/submit_tex
+  local_template: null
+review_format:
+  num_reviewers: 0
+  scoring_scale: null
+  required_sections: []
+  rebuttal_phase: no
+  rebuttal_word_limit: null
+disclosure:
+  ai_use_required: no
+  policy_url: https://info.arxiv.org/help/policies/policy_on_use_of_AI.html
+  required_statement_location: optional
+  notes: "arXiv asks but does not enforce AI use disclosure."
+reproducibility:
+  checklist_required: no
+  checklist_url: null
+  code_release_required: no
+broader_impact:
+  required: no
+  section_name: null
+notes: |
+  - Preprint, not a peer-reviewed venue.
+  - Use this venue setting when generating an arXiv-ready PDF before submission to a conference.
+  - Common pre-conference move: post on arXiv after acceptance to build citation momentum.
+  - Categories: cs.LG, cs.CL, cs.CV, cs.AI, stat.ML are most common for AI/ML.

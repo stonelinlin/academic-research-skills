@@ -2,6 +2,88 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.0.0] - 2026-04-20 — BREAKING
+
+**Major restructuring**: `academic-research-skills` is renamed to `ai-research-skills`. The 4 large skills × 24 modes architecture is replaced by 10 atomic AI/ML-specialized skills + 1 optional meta-skill, callable via natural language without explicit mode flags.
+
+### Added — 10 Atomic Skills
+
+- **`idea-forge`** (NEW) — AI/ML research idea generation with novelty/feasibility/risk scoring and Devil's Advocate stress-testing. Outputs ranked Idea Cards.
+- **`lit-scout`** — Literature search, verification (Semantic Scholar / arXiv), annotated bibliography. Wraps `deep-research/agents/bibliography_agent`.
+- **`related-positioning`** (NEW) — Differentiate AI/ML work via 3-axis positioning matrix + reviewer-threat map + Related Work section draft.
+- **`method-architect`** — Experimental design (hypotheses, conditions, baselines, controls, statistical plan, ablations, reproducibility spec). Wraps `deep-research/agents/research_architect_agent`.
+- **`paper-writer`** — Section drafting with anti-leakage protocol and venue-aware style. Wraps `academic-paper/agents/draft_writer_agent` + `revision_coach_agent` + `abstract_bilingual_agent`.
+- **`figure-smith`** — Reproducible figure code (matplotlib/tikz/mermaid) + VLM verification + alt text. Wraps `academic-paper/agents/visualization_agent`.
+- **`integrity-check`** — Citation, claim, plagiarism, 7-mode AI failure-mode audit. Block-on-suspect verdict. Wraps `academic-pipeline/agents/integrity_verification_agent`.
+- **`paper-reviewer`** — 5-perspective AI venue peer review (Methodology / Domain / Perspective / DA / EIC) in venue's review format. Wraps existing `academic-paper-reviewer/agents/`.
+- **`rebuttal-coach`** (NEW) — OpenReview-style author response with priority matrix, per-reviewer drafts within venue word limits, revision plan, auditor.
+- **`venue-formatter`** — Venue-compliant compilation + disclosure + reproducibility checklist + broader impact + camera-ready helper. Wraps `academic-paper/agents/formatter_agent`.
+
+### Added — Optional Meta-Skill
+
+- **`research-pipeline`** — End-to-end orchestration with **3 mandatory checkpoints** (down from 7-10 in v3.3). Demoted from primary entry point to optional convenience.
+
+### Added — Shared Layer
+
+- `shared/agents/socratic_mentor.md` — consolidated from 2 prior copies.
+- `shared/agents/devils_advocate.md` — consolidated from 2 prior copies.
+- `shared/agents/state_tracker.md` — promoted from `academic-pipeline/agents/`.
+- `shared/protocols/anti_sycophancy.md` — 4-Stop Rule reusable across skills.
+- `shared/protocols/integrity_protocol.md` — index pointing to v3 integrity infrastructure.
+- `shared/venue_db/` — 8 YAML files: NeurIPS, ICLR, ICML, ACL, EMNLP, CVPR, AAAI, arXiv. Each declares page limits, template, review format, disclosure policy, reproducibility checklist URL, broader-impact requirements.
+
+### Added — Documentation
+
+- `docs/COMMAND_INDEX.md` — natural-language triggers per skill, disambiguation rules, handoff chains.
+- `docs/AI_VENUE_GUIDE.md` — human-readable companion to `shared/venue_db/`.
+- `docs/MIGRATION_v3_to_v4.md` — exhaustive v3.3 → v4.0 mapping.
+- `README.md` rewritten (≤200 lines) for atomic-skill quick start.
+
+### Added — CI Lints
+
+- `scripts/check_skill_md_length.py` — caps SKILL.md at 250 lines (legacy v3 skills exempt during migration).
+- `scripts/check_trigger_words.py` — enforces 3-12 triggers per skill, no overlap across skills.
+- `scripts/check_venue_db.py` — validates `shared/venue_db/*.yaml` schema.
+- All wired into `.github/workflows/spec-consistency.yml`.
+
+### Changed
+
+- **Domain default**: HEI (higher education) → AI/ML.
+- **Default venues**: vague → NeurIPS / ICLR (configurable).
+- **Default paper structure**: IMRaD → Method-Experiments-RelatedWork-Discussion.
+- **Bilingual abstracts**: mandatory → optional (English default for AI venues).
+- **Mode selection**: 24 explicit modes → 0 explicit modes (auto-detected sub-modes per skill).
+- **Checkpoint cadence**: 7-10 mandatory in `academic-pipeline` → 3 mandatory in `research-pipeline` (now optional).
+- **SKILL.md length**: 329-547 lines → ≤250 lines (CI-enforced for v4.0 skills).
+
+### Deprecated (kept until 2026-10)
+
+- Top-level `deep-research/`, `academic-paper/`, `academic-paper-reviewer/`, `academic-pipeline/` SKILL.md files. Their agent files remain as references for v4.0 atomic skills.
+- v3.3 trigger phrases ("deep research", "academic paper", "academic pipeline") will route to closest v4.0 skill with one-line migration notice.
+
+### Removed
+
+- `MODE_REGISTRY.md` (24 explicit modes no longer exist).
+- Duplicate agent definitions (`socratic_mentor_agent.md` and `devils_advocate_agent.md` — each had 2 copies).
+- HEI-specific examples and vocabulary.
+- General academic paper structures (case-study, policy-brief, theoretical-paper).
+
+### Migration
+
+See [`docs/MIGRATION_v3_to_v4.md`](docs/MIGRATION_v3_to_v4.md). 6-month backward-compatibility window through 2026-10.
+
+### Why
+
+User feedback identified four pain points in v3.3:
+1. Entry complexity (24 modes × 4 skills hard to navigate)
+2. Verbose docs (547-line SKILL.md buried critical rules)
+3. Tedious checkpoints (7-10 confirmations per pipeline run)
+4. Lack of AI/ML specialization (HEI defaults didn't match user's domain)
+
+v4.0 addresses all four via atomic skills, length-budgeted SKILL.md, 3-checkpoint orchestrator, and AI/ML-specialized venue knowledge.
+
+---
+
 ## [3.3.6] - 2026-04-15
 
 ### Added

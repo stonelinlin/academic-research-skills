@@ -1,0 +1,42 @@
+venue: neurips
+full_name: Conference on Neural Information Processing Systems
+type: conference
+fields: [machine-learning, deep-learning, neuroscience, statistics, optimization]
+deadlines:
+  abstract: mid-May
+  full_paper: late-May
+page_limits:
+  main_text: 9
+  references: unlimited
+  appendix: unlimited
+  rebuttal: 5000
+template:
+  latex_class: neurips
+  bibtex_style: plain
+  template_url: https://neurips.cc/Conferences/2025/PaperInformation/StyleFiles
+  local_template: neurips_2026.tex
+review_format:
+  num_reviewers: 4
+  scoring_scale: "1-10"
+  required_sections: [summary, strengths, weaknesses, questions, limitations, ethics, soundness, presentation, contribution, overall, confidence]
+  rebuttal_phase: yes
+  rebuttal_word_limit: 6000
+disclosure:
+  ai_use_required: yes
+  policy_url: https://neurips.cc/Conferences/2025/CallForPapers
+  required_statement_location: acknowledgments_or_appendix
+  notes: "Authors must disclose LLM use that goes beyond polishing or coding assistance."
+reproducibility:
+  checklist_required: yes
+  checklist_url: https://neurips.cc/public/guides/PaperChecklist
+  code_release_required: recommended
+  notes: "Failure to answer the Paper Checklist faithfully is grounds for desk reject."
+broader_impact:
+  required: recommended
+  section_name: Broader Impacts
+  notes: "Required since NeurIPS 2020; flexible since 2022 but expected for high-stakes work."
+notes: |
+  - Double-blind review.
+  - Reviewer load is heavy (4-6 papers); strong opening summary in abstract pays off.
+  - Limitations section is a separate Paper Checklist item; do not skip.
+  - Anonymous supplementary material allowed.

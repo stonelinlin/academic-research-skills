@@ -1,0 +1,38 @@
+venue: icml
+full_name: International Conference on Machine Learning
+type: conference
+fields: [machine-learning, deep-learning, theory, statistics, optimization]
+deadlines:
+  abstract: late-January
+  full_paper: early-February
+page_limits:
+  main_text: 8
+  references: unlimited
+  appendix: unlimited
+  rebuttal: 5000
+template:
+  latex_class: icml
+  bibtex_style: icml2026
+  template_url: https://icml.cc/Conferences/2025/AuthorInstructions
+  local_template: icml_2026.tex
+review_format:
+  num_reviewers: 3
+  scoring_scale: "1-10"
+  required_sections: [summary, strengths, weaknesses, questions, limitations, soundness, presentation, contribution, overall, confidence]
+  rebuttal_phase: yes
+  rebuttal_word_limit: 5000
+disclosure:
+  ai_use_required: yes
+  policy_url: https://icml.cc/Conferences/2025/CallForPapers
+  required_statement_location: acknowledgments
+reproducibility:
+  checklist_required: recommended
+  checklist_url: null
+  code_release_required: recommended
+broader_impact:
+  required: recommended
+  section_name: Broader Impact
+notes: |
+  - Double-blind review.
+  - Stricter on theoretical rigor than NeurIPS/ICLR; expect reviewers to ask for proofs in appendix.
+  - Single rebuttal round (no back-and-forth like ICLR).

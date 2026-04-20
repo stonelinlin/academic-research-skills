@@ -33,3 +33,18 @@ jobs:
         env:
           PYTHONPATH: scripts
         run: python3 scripts/check_task_type.py
+
+      - name: Check SKILL.md length budget (v4.0)
+        env:
+          PYTHONPATH: scripts
+        run: python3 scripts/check_skill_md_length.py
+
+      - name: Check trigger word non-overlap (v4.0)
+        env:
+          PYTHONPATH: scripts
+        run: python3 scripts/check_trigger_words.py
+
+      - name: Check venue_db schema (v4.0)
+        env:
+          PYTHONPATH: scripts
+        run: python3 scripts/check_venue_db.py

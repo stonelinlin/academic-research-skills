@@ -1,0 +1,42 @@
+venue: cvpr
+full_name: IEEE/CVF Conference on Computer Vision and Pattern Recognition
+type: conference
+fields: [computer-vision, image-processing, multimodal, generative-models]
+deadlines:
+  abstract: early-November
+  full_paper: mid-November
+page_limits:
+  main_text: 8
+  references: unlimited
+  appendix: unlimited
+  rebuttal: 1
+template:
+  latex_class: cvpr
+  bibtex_style: ieee
+  template_url: https://cvpr.thecvf.com/Conferences/2025/AuthorGuidelines
+  local_template: cvpr_2026.tex
+review_format:
+  num_reviewers: 3
+  scoring_scale: "1-5"
+  required_sections: [summary, strengths, weaknesses, rating, confidence]
+  rebuttal_phase: yes
+  rebuttal_word_limit: null
+  notes: "Rebuttal is ONE PAGE PDF (max), not a word count. Figures allowed. Extremely tight."
+disclosure:
+  ai_use_required: yes
+  policy_url: https://cvpr.thecvf.com/Conferences/2025/AuthorGuidelines
+  required_statement_location: acknowledgments
+  notes: "CVPR follows IEEE policies on AI tool disclosure."
+reproducibility:
+  checklist_required: no
+  checklist_url: null
+  code_release_required: recommended
+broader_impact:
+  required: no
+  section_name: null
+  notes: "Optional; CVPR has not adopted ML-conference-style mandatory broader impact."
+notes: |
+  - Double-blind review.
+  - One-page rebuttal PDF is uniquely tight; use figures and bullet lists aggressively.
+  - Reproducibility expectations are looser than NeurIPS/ICLR but code release is still expected for SOTA claims.
+  - High submission volume (~10K papers); reviewer fatigue is real.

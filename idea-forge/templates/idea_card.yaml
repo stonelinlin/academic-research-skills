@@ -1,0 +1,42 @@
+# Idea Card Template (idea-forge v4.0)
+# Each Idea Card is one entry in the output array.
+
+id: idea-001                          # auto-generated
+one_line_claim: ""                    # verb-led, falsifiable
+contribution_shape: ""                # method | benchmark | analysis | theory | position
+motivation: ""                        # 2 sentences max
+
+novelty_score: 0                      # 1-5; see novelty_taxonomy.md
+novelty_reasoning: ""                 # 1 sentence
+feasibility_score: 0                  # 1-5; relative to user constraints
+feasibility_reasoning: ""             # 1 sentence
+risk_score: 0                         # 1-5; 1=safe, 5=could fail
+risk_reasoning: ""                    # 1 sentence
+
+minimum_experiment:
+  setup: ""                           # 1-3 sentences
+  metrics: []                         # list of 1-3
+  expected_signal: ""                 # what tells you it worked
+  estimated_compute_hours: 0
+  estimated_wall_time: ""             # e.g., "3 weeks"
+
+closest_existing_work:
+  - title: ""
+    arxiv_id: ""
+    venue: ""
+    year: 0
+    differentiation: ""               # 1 sentence — what's new vs this paper
+
+devils_advocate:
+  strongest_attack: ""                # 1 sentence
+  intensity: 0                        # 1-5; 5=paper-killing
+  mitigation: ""                      # how to defuse if you proceed; "" if intensity=5 and unfixable
+
+fits_venue: []                        # tags from shared/venue_db/
+
+handoff_hints:
+  next_skill: ""                      # lit-scout | related-positioning | method-architect | none
+  artifacts_to_pass: []               # what to feed forward
+
+recommended: false                    # true only for top-3
+recommendation_reason: ""             # why this made the cut

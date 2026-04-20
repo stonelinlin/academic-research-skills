@@ -1,0 +1,38 @@
+venue: emnlp
+full_name: Conference on Empirical Methods in Natural Language Processing
+type: conference
+fields: [nlp, empirical-methods, language-models]
+deadlines:
+  abstract: mid-June
+  full_paper: late-June
+page_limits:
+  main_text: 8
+  references: unlimited
+  appendix: unlimited
+  rebuttal: 1500
+template:
+  latex_class: acl
+  bibtex_style: acl_natbib
+  template_url: https://github.com/acl-org/acl-style-files
+  local_template: acl_2026.tex
+review_format:
+  num_reviewers: 3
+  scoring_scale: "1-5"
+  required_sections: [paper_summary, summary_of_strengths, summary_of_weaknesses, comments_suggestions_typos, soundness, excitement, reproducibility, ethical_concerns, reviewer_confidence, overall_recommendation]
+  rebuttal_phase: yes
+  rebuttal_word_limit: 1500
+disclosure:
+  ai_use_required: yes
+  policy_url: https://2024.emnlp.org/calls/main_conference_papers/
+  required_statement_location: limitations_section
+reproducibility:
+  checklist_required: yes
+  checklist_url: https://aclrollingreview.org/responsibleNLPresearch/
+  code_release_required: recommended
+broader_impact:
+  required: yes
+  section_name: Broader Impact / Ethics Statement
+notes: |
+  - Same template family as ACL (use acl-style-files).
+  - EMNLP traditionally favors empirical/applied work over theoretical.
+  - Same Limitations + Ethics requirements as ACL.

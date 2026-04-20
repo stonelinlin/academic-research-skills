@@ -1,0 +1,39 @@
+venue: aaai
+full_name: AAAI Conference on Artificial Intelligence
+type: conference
+fields: [artificial-intelligence, knowledge-representation, planning, multi-agent-systems, ml]
+deadlines:
+  abstract: early-August
+  full_paper: mid-August
+page_limits:
+  main_text: 7
+  references: 2
+  appendix: unlimited
+  rebuttal: 4500
+template:
+  latex_class: aaai
+  bibtex_style: aaai
+  template_url: https://aaai.org/conference/aaai/aaai-26/submission-instructions/
+  local_template: aaai_2026.tex
+review_format:
+  num_reviewers: 3
+  scoring_scale: "1-10"
+  required_sections: [summary, strengths, weaknesses, questions, soundness, presentation, contribution, overall, confidence]
+  rebuttal_phase: yes
+  rebuttal_word_limit: 4500
+disclosure:
+  ai_use_required: yes
+  policy_url: https://aaai.org/conference/aaai/aaai-26/policies/
+  required_statement_location: acknowledgments
+reproducibility:
+  checklist_required: yes
+  checklist_url: https://aaai.org/conference/aaai/aaai-26/reproducibility-checklist/
+  code_release_required: recommended
+broader_impact:
+  required: recommended
+  section_name: Broader Impact
+notes: |
+  - Two-phase review (abstract + full paper).
+  - References limited to 2 pages — be selective.
+  - AAAI Reproducibility Checklist is mandatory for accepted papers.
+  - Broader range of AI sub-fields than NeurIPS/ICLR (includes symbolic AI, planning).
