@@ -12,7 +12,7 @@ External contribution from [@cloudenochcsis](https://github.com/cloudenochcsis) 
 
 **Files changed**: 1 file, +20 / −2 lines
 
-**`academic-paper-reviewer/references/top_journals_by_field.md`**
+**`archive/v3/academic-paper-reviewer/references/top_journals_by_field.md`**
 - Section 7 heading: "Information Systems (Basket of 8)" → "Information Systems (Senior Scholars' Basket of 11)"
 - Added 3 journals to complete the AIS official list:
   - *Decision Support Systems* (Elsevier, IF 6-8) — Analytics, decision-making, DSS design and evaluation
@@ -39,9 +39,9 @@ Inspired by patterns from [aspi6246/Claude-Code-Skills-for-Academics](https://gi
 
 **Wave 2: Traceability + Cognitive Frameworks + Reinforcement**
 - R&R Traceability Matrix (Schema 11) in `shared/handoff_schemas.md`: `Author's Claim` + `Verified?` columns in re-review output
-- New reference: `deep-research/references/argumentation_reasoning_framework.md` (Toulmin, Bradford Hill, IBE, epistemic status)
-- New reference: `academic-paper-reviewer/references/review_quality_thinking.md` (three lenses, reviewer traps, calibration)
-- New reference: `academic-paper/references/writing_judgment_framework.md` (clarity test, reader's journey, voice, revision matrix)
+- New reference: `archive/v3/deep-research/references/argumentation_reasoning_framework.md` (Toulmin, Bradford Hill, IBE, epistemic status)
+- New reference: `archive/v3/academic-paper-reviewer/references/review_quality_thinking.md` (three lenses, reviewer traps, calibration)
+- New reference: `archive/v3/academic-paper/references/writing_judgment_framework.md` (clarity test, reader's journey, voice, revision matrix)
 - Mid-conversation reinforcement protocol in pipeline: stage-specific IRON RULE + Anti-Pattern reminders at every transition
 - Self-check questions at every FULL checkpoint (5 questions: citation integrity, sycophancy, quality trajectory, scope, completeness)
 
@@ -64,25 +64,25 @@ Inspired by patterns from [aspi6246/Claude-Code-Skills-for-Academics](https://gi
 
 ### Style Calibration + Writing Quality Check (v2.9)
 
-**Files changed**: 10 files across `academic-paper/`, `deep-research/`, `academic-pipeline/`, `shared/`, root
+**Files changed**: 10 files across `archive/v3/academic-paper/`, `archive/v3/deep-research/`, `archive/v3/academic-pipeline/`, `shared/`, root
 
 **New files**:
 - `shared/style_calibration_protocol.md`: Full calibration flow (6 dimensions: sentence length, paragraph length, vocabulary preferences, citation integration, modifier style, register shifts). Priority system: discipline norms (hard) > journal conventions (strong) > personal style (soft). Conflict resolution with user notification.
-- `academic-paper/references/writing_quality_check.md`: Writing quality checklist (5 categories: 25-term AI high-frequency word warnings, punctuation pattern control, throat-clearing detection, structural pattern warnings, burstiness checks). Not a humanizer — good writing rules applicable regardless of author.
+- `archive/v3/academic-paper/references/writing_quality_check.md`: Writing quality checklist (5 categories: 25-term AI high-frequency word warnings, punctuation pattern control, throat-clearing detection, structural pattern warnings, burstiness checks). Not a humanizer — good writing rules applicable regardless of author.
 
 **Modified agents**:
-- `academic-paper/agents/intake_agent.md`: New Step 10 (Style Calibration, optional). Renumbered Funding Sources to Step 11. Added `style_profile` field to Paper Configuration Record.
-- `academic-paper/agents/draft_writer_agent.md`: Step 1 pre-writing checklist gains Style Profile + Writing Quality Check items. Step 2 self-review gains Step 7 (style & lint check).
-- `deep-research/agents/report_compiler_agent.md`: New sections for optional Style Calibration and Writing Quality Check before Writing Style Guidelines.
-- `academic-pipeline/agents/pipeline_orchestrator_agent.md`: Style Profile carry-through in Material Passport.
+- `archive/v3/academic-paper/agents/intake_agent.md`: New Step 10 (Style Calibration, optional). Renumbered Funding Sources to Step 11. Added `style_profile` field to Paper Configuration Record.
+- `archive/v3/academic-paper/agents/draft_writer_agent.md`: Step 1 pre-writing checklist gains Style Profile + Writing Quality Check items. Step 2 self-review gains Step 7 (style & lint check).
+- `archive/v3/deep-research/agents/report_compiler_agent.md`: New sections for optional Style Calibration and Writing Quality Check before Writing Style Guidelines.
+- `archive/v3/academic-pipeline/agents/pipeline_orchestrator_agent.md`: Style Profile carry-through in Material Passport.
 
 **Schema update**:
 - `shared/handoff_schemas.md`: Schema 10 (Style Profile) with 8 required fields, 3 optional fields, consumption priority system, and example.
 
 **SKILL.md updates**:
-- `academic-paper/SKILL.md`: v2.4 -> v2.5
-- `deep-research/SKILL.md`: v2.3 -> v2.4
-- `academic-pipeline/SKILL.md`: v2.6 -> v2.7
+- `archive/v3/academic-paper/SKILL.md`: v2.4 -> v2.5
+- `archive/v3/deep-research/SKILL.md`: v2.3 -> v2.4
+- `archive/v3/academic-pipeline/SKILL.md`: v2.6 -> v2.7
 
 **README updates**: EN + zh-TW both updated with v2.9 badge, new features in Features list, and changelog entry.
 
@@ -94,15 +94,15 @@ Inspired by patterns from [aspi6246/Claude-Code-Skills-for-Academics](https://gi
 
 ### Intent-Based Mode Activation (v2.6.2)
 
-**Files changed**: 6 files across `deep-research/`, `academic-paper/`, root
+**Files changed**: 6 files across `archive/v3/deep-research/`, `archive/v3/academic-paper/`, root
 
-**deep-research/SKILL.md**:
+**archive/v3/deep-research/SKILL.md**:
 - `### Socratic Mode Trigger Keywords` → `### Socratic Mode Activation`
 - Replaced keyword-matching logic with intent-based activation: 5 intent signals that work in any language
 - Added default rule: ambiguous intent → prefer `socratic` over `full`
 - Example triggers condensed to single line with "or equivalent in any language"
 
-**academic-paper/SKILL.md**:
+**archive/v3/academic-paper/SKILL.md**:
 - `### Plan Mode Trigger Keywords` → `### Plan Mode Activation`
 - Replaced keyword-matching logic with intent-based activation: 6 intent signals
 - Added default rule: ambiguous intent → prefer `plan` over `full`
@@ -120,7 +120,7 @@ Inspired by patterns from [aspi6246/Claude-Code-Skills-for-Academics](https://gi
 
 ### Bilingual Trigger Keywords for Socratic & Plan Mode (v2.6.1)
 
-**Files changed**: 4 files across `deep-research/`, `academic-paper/`
+**Files changed**: 4 files across `archive/v3/deep-research/`, `archive/v3/academic-paper/`
 
 **deep-research** (2 files):
 - `SKILL.md`: Added Traditional Chinese (繁體中文) trigger keywords to YAML description, general Trigger Keywords section, and Socratic Mode Trigger Keywords section (6 Chinese keyword groups with variants). Added Chinese Quick Start examples. Quick Mode Selection Guide now bilingual.
@@ -138,7 +138,7 @@ Inspired by patterns from [aspi6246/Claude-Code-Skills-for-Academics](https://gi
 
 ### Academic Skills Suite v2.6 — 15 Improvements Across 4 Skills
 
-**Files changed**: 30 files (17 new, 13 modified) across `deep-research/`, `academic-paper/`, `academic-paper-reviewer/`, `academic-pipeline/`, `shared/`
+**Files changed**: 30 files (17 new, 13 modified) across `archive/v3/deep-research/`, `archive/v3/academic-paper/`, `archive/v3/academic-paper-reviewer/`, `archive/v3/academic-pipeline/`, `shared/`
 
 **deep-research v2.3** (+7 new files, 3 modified):
 - New systematic-review / PRISMA mode (7th mode) with 3 new agents: `risk_of_bias_agent` (RoB 2 + ROBINS-I), `meta_analysis_agent` (effect sizes, heterogeneity, GRADE), `monitoring_agent` (post-pipeline literature alerts)
@@ -175,19 +175,19 @@ Inspired by patterns from [aspi6246/Claude-Code-Skills-for-Academics](https://gi
 
 ### Full English Translation — All Skills Translated to English
 
-**Files changed**: All `.md` files across `academic-pipeline/`, `academic-paper/`, `academic-paper-reviewer/`, `deep-research/`
+**Files changed**: All `.md` files across `archive/v3/academic-pipeline/`, `archive/v3/academic-paper/`, `archive/v3/academic-paper-reviewer/`, `archive/v3/deep-research/`
 
 **Changes**:
 - Translated all Chinese content to English across 68+ files (agents, references, templates, examples, SKILL.md)
 - TSSCI journal names in `top_journals_by_field.md` retain official Chinese names as proper nouns (with English translations)
-- Privacy scan: removed residual `HEEACT Luminai` reference from `deep-research/references/socratic_questioning_framework.md`
+- Privacy scan: removed residual `HEEACT Luminai` reference from `archive/v3/deep-research/references/socratic_questioning_framework.md`
 - `README.zh-TW.md` intentionally kept in Chinese as the bilingual README option
 
 ---
 
 ### academic-pipeline v2.5 — External Review Protocol
 
-**Files changed**: `academic-pipeline/SKILL.md`
+**Files changed**: `archive/v3/academic-pipeline/SKILL.md`
 
 **Changes**:
 - New External Review Protocol section: 4-step workflow for handling real journal reviewer feedback (intake → strategic coaching → revise + Response to Reviewers → completeness check)
@@ -201,7 +201,7 @@ Inspired by patterns from [aspi6246/Claude-Code-Skills-for-Academics](https://gi
 
 ### academic-pipeline v2.4 — Stage 6 Process Summary + Collaboration Quality Evaluation
 
-**Files changed**: `academic-pipeline/SKILL.md`, `README.md`, `README.zh-TW.md`
+**Files changed**: `archive/v3/academic-pipeline/SKILL.md`, `README.md`, `README.zh-TW.md`
 
 **academic-pipeline v2.4**:
 - New Stage 6 PROCESS SUMMARY: auto-generates structured paper creation process record after pipeline completion
@@ -219,7 +219,7 @@ Inspired by patterns from [aspi6246/Claude-Code-Skills-for-Academics](https://gi
 
 ### academic-pipeline v2.3 — APA 7.0 Formatting & LaTeX-to-PDF
 
-**Files changed**: `academic-pipeline/SKILL.md`, `README.md`, `README.zh-TW.md`
+**Files changed**: `archive/v3/academic-pipeline/SKILL.md`, `README.md`, `README.zh-TW.md`
 
 **academic-pipeline v2.3**:
 - Stage 5 FINALIZE now prompts user for formatting style (APA 7.0 / Chicago / IEEE) before generating LaTeX
@@ -278,16 +278,16 @@ Inspired by patterns from [aspi6246/Claude-Code-Skills-for-Academics](https://gi
 **Motivation**: 4 academic research skills totaled 2,254 lines with significant cross-skill duplication and redundant inline content already available as template files.
 
 **Files changed**:
-- `academic-paper-reviewer/SKILL.md` (570→470, -100 lines)
-- `academic-pipeline/SKILL.md` (675→535, -140 lines)
-- `deep-research/SKILL.md` (469→435, -34 lines)
-- `academic-paper/SKILL.md` (540→443, -97 lines)
+- `archive/v3/academic-paper-reviewer/SKILL.md` (570→470, -100 lines)
+- `archive/v3/academic-pipeline/SKILL.md` (675→535, -140 lines)
+- `archive/v3/deep-research/SKILL.md` (469→435, -34 lines)
+- `archive/v3/academic-paper/SKILL.md` (540→443, -97 lines)
 
 **Changes**:
 - A: Reviewer — removed inline templates, replaced with `templates/` file references (kept Devil's Advocate special format notes)
 - B: Pipeline — removed ASCII state machine, replaced with concise 9-stage list + reference
 - C: Pipeline — simplified Two-Stage Review Protocol to inputs/outputs/branching only
-- D: 3 skills — "Full Academic Pipeline" section replaced with one-line reference to `academic-pipeline/SKILL.md`
+- D: 3 skills — "Full Academic Pipeline" section replaced with one-line reference to `archive/v3/academic-pipeline/SKILL.md`
 - E: 4 skills — trimmed routing tables, removed HEI routes already defined in root CLAUDE.md
 - F+G: Removed duplicate Mode Selection sections from deep-research and academic-paper
 - H: academic-paper Handoff Protocol simplified to overview + upstream reference

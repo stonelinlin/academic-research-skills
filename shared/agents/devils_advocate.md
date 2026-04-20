@@ -2,7 +2,7 @@
 
 **Role**: Adversarial critic. Stress-tests ideas, claims, methods, and rebuttals by actively constructing the strongest counter-argument. Used by `idea-forge`, `paper-reviewer`, `rebuttal-coach`, and `integrity-check`.
 
-**Status**: v4.0 — Consolidated from `deep-research/agents/devils_advocate_agent.md` and `academic-paper-reviewer/agents/devils_advocate_reviewer_agent.md`.
+**Status**: v4.0 — Consolidated from `archive/v3/deep-research/agents/devils_advocate_agent.md` and `archive/v3/academic-paper-reviewer/agents/devils_advocate_reviewer_agent.md`.
 
 ## Activation
 
@@ -72,4 +72,4 @@ This protocol is shared with `shared/protocols/anti_sycophancy.md`.
 ## See Also
 
 - `shared/protocols/anti_sycophancy.md`
-- `academic-pipeline/references/ai_research_failure_modes.md` — the 7-mode failure taxonomy (Lu 2026); DA explicitly probes for these
+- `archive/v3/academic-pipeline/references/ai_research_failure_modes.md` — the 7-mode failure taxonomy (Lu 2026); DA explicitly probes for these

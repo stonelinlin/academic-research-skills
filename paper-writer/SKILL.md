@@ -97,18 +97,18 @@ flowchart TD
 
 | Agent | Role | File |
 |---|---|---|
-| `draft_writer_agent` | Core section drafting | [`academic-paper/agents/draft_writer_agent.md`](../academic-paper/agents/draft_writer_agent.md) |
-| `revision_coach_agent` | Revision-mode prose editing | [`academic-paper/agents/revision_coach_agent.md`](../academic-paper/agents/revision_coach_agent.md) |
-| `abstract_bilingual_agent` | Optional bilingual abstract | [`academic-paper/agents/abstract_bilingual_agent.md`](../academic-paper/agents/abstract_bilingual_agent.md) |
-| `argument_builder_agent` | Discussion / Conclusion structuring | [`academic-paper/agents/argument_builder_agent.md`](../academic-paper/agents/argument_builder_agent.md) |
-| `structure_architect_agent` | Outline / re-organization | [`academic-paper/agents/structure_architect_agent.md`](../academic-paper/agents/structure_architect_agent.md) |
+| `draft_writer_agent` | Core section drafting | [`archive/v3/academic-paper/agents/draft_writer_agent.md`](../archive/v3/academic-paper/agents/draft_writer_agent.md) |
+| `revision_coach_agent` | Revision-mode prose editing | [`archive/v3/academic-paper/agents/revision_coach_agent.md`](../archive/v3/academic-paper/agents/revision_coach_agent.md) |
+| `abstract_bilingual_agent` | Optional bilingual abstract | [`archive/v3/academic-paper/agents/abstract_bilingual_agent.md`](../archive/v3/academic-paper/agents/abstract_bilingual_agent.md) |
+| `argument_builder_agent` | Discussion / Conclusion structuring | [`archive/v3/academic-paper/agents/argument_builder_agent.md`](../archive/v3/academic-paper/agents/argument_builder_agent.md) |
+| `structure_architect_agent` | Outline / re-organization | [`archive/v3/academic-paper/agents/structure_architect_agent.md`](../archive/v3/academic-paper/agents/structure_architect_agent.md) |
 | `socratic_mentor` (shared) | Plan-mode chapter dialogue | [`shared/agents/socratic_mentor.md`](../shared/agents/socratic_mentor.md) |
 
 ## Key Protocols
 
-- [`academic-paper/references/anti_leakage_protocol.md`](../academic-paper/references/anti_leakage_protocol.md) — IRON RULE: only cite facts present in `materials`
-- [`academic-paper/references/writing_quality_check.md`](../academic-paper/references/writing_quality_check.md) — anti-pattern lint
-- [`academic-paper/references/style_calibration.md`](../academic-paper/references/style_calibration.md) — voice matching to existing draft
+- [`archive/v3/academic-paper/references/anti_leakage_protocol.md`](../archive/v3/academic-paper/references/anti_leakage_protocol.md) — IRON RULE: only cite facts present in `materials`
+- [`archive/v3/academic-paper/references/writing_quality_check.md`](../archive/v3/academic-paper/references/writing_quality_check.md) — anti-pattern lint
+- [`archive/v3/academic-paper/references/academic_writing_style.md`](../archive/v3/academic-paper/references/academic_writing_style.md) — voice matching to existing draft
 - [`shared/venue_db/<venue>.yaml`](../shared/venue_db/) — venue-specific length and structure
 
 ## IRON RULES (from anti_leakage_protocol.md)
@@ -117,7 +117,7 @@ flowchart TD
 2. **Citations are markers, not invented references.** Use `\cite{key}` placeholders matching `materials.bibliography`. If no key exists, mark `\cite{TODO_<topic>}` and surface in metadata.
 3. **No "delve into", no "crucial", no "it is important to note".** See writing_quality_check.md for the full forbidden phrase list.
 4. **Word count within ±10% of `target_word_count`.** Beyond that, length adjustment is mandatory.
-5. **Style match to existing draft if `existing_draft` provided.** Run style_calibration.md.
+5. **Style match to existing draft if `existing_draft` provided.** Run academic_writing_style.md.
 
 ## Anti-Patterns
 

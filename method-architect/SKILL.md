@@ -153,8 +153,8 @@ flowchart TD
 
 | Agent | Role | File |
 |---|---|---|
-| `research_architect_agent` | Core experimental design | [`deep-research/agents/research_architect_agent.md`](../deep-research/agents/research_architect_agent.md) |
-| `risk_of_bias_agent` | Identify confounds and biases | [`deep-research/agents/risk_of_bias_agent.md`](../deep-research/agents/risk_of_bias_agent.md) |
+| `research_architect_agent` | Core experimental design | [`archive/v3/deep-research/agents/research_architect_agent.md`](../archive/v3/deep-research/agents/research_architect_agent.md) |
+| `risk_of_bias_agent` | Identify confounds and biases | [`archive/v3/deep-research/agents/risk_of_bias_agent.md`](../archive/v3/deep-research/agents/risk_of_bias_agent.md) |
 | `devils_advocate` (shared) | Stress test the protocol | [`shared/agents/devils_advocate.md`](../shared/agents/devils_advocate.md) |
 
 ## IRON RULES

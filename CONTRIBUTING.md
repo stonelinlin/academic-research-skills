@@ -71,7 +71,7 @@ The repo is maintained by [Cheng-I Wu](https://github.com/Imbad0202) (HEEACT). T
 
 ## Academic integrity policy
 
-This repo is designed to be **assistive, not deceptive**. See [POSITIONING.md](POSITIONING.md) for the full design philosophy. Contributors must not add features designed to evade AI detection tools. If unsure, open an issue to discuss before submitting a PR.
+This repo is designed to be **assistive, not deceptive**. See [archive/v3/POSITIONING.md](archive/v3/POSITIONING.md) for the full design philosophy. Contributors must not add features designed to evade AI detection tools. If unsure, open an issue to discuss before submitting a PR.
 
 ---
 
@@ -81,7 +81,7 @@ Contributors are credited in commit messages, CHANGELOG entries, and the Contrib
 
 ## License
 
-By contributing, you agree that your contributions will be licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). See [POSITIONING.md](POSITIONING.md) for usage terms.
+By contributing, you agree that your contributions will be licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). See [archive/v3/POSITIONING.md](archive/v3/POSITIONING.md) for usage terms.
 
 ## When adding a new skill
 

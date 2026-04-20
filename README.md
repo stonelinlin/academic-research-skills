@@ -1,154 +1,224 @@
-# ai-research-skills (formerly academic-research-skills)
+# ai-research-skills
 
-**v4.0.0** — Atomic skills for AI/ML research. Trigger any skill in natural language; skills compose but don't require it.
+[![Version](https://img.shields.io/badge/version-v4.0.0-blue)](CHANGELOG.md)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
 
-> Renaming note: the project was previously `academic-research-skills` (general academic). v4.0 specializes for AI/ML and renames to `ai-research-skills`. The old top-level directory may still exist during the 6-month migration window — see [`docs/MIGRATION_v3_to_v4.md`](docs/MIGRATION_v3_to_v4.md).
+> **10 个原子 skill，专为 AI/ML 科研论文流程而生。**
+> 每个 skill 只做一件事，自然语言触发，可独立调用，也能组合成完整管线。
 
-## What This Is
+---
 
-10 atomic skills, each does one thing well, each callable on its own:
+## TL;DR — 想做什么就直说
 
-| Skill | What it does | Typical trigger |
+| 你想做的事 | 直接说 | 触发的 skill |
 |---|---|---|
-| [`idea-forge`](idea-forge/) | Generate + score AI/ML research ideas | "give me ideas on X" |
-| [`lit-scout`](lit-scout/) | Find + verify literature | "find papers on X" |
-| [`related-positioning`](related-positioning/) | Differentiate vs existing work | "position my work vs A, B, C" |
-| [`method-architect`](method-architect/) | Design experiments | "design experiment for X" |
-| [`paper-writer`](paper-writer/) | Draft sections | "write the intro" |
-| [`figure-smith`](figure-smith/) | Plot results, design figures | "plot accuracy vs X" |
-| [`integrity-check`](integrity-check/) | Verify citations, claims, reproducibility | "check citations" |
-| [`paper-reviewer`](paper-reviewer/) | Multi-perspective peer review | "review my paper" |
-| [`rebuttal-coach`](rebuttal-coach/) | Author response to reviewers | "write rebuttal" |
-| [`venue-formatter`](venue-formatter/) | Compile to NeurIPS/ICLR/etc. | "format for NeurIPS" |
-| `research-pipeline` (meta, optional) | Orchestrate the full workflow | "full pipeline" |
+| 找研究方向 | "give me ideas on long-context evaluation" / "想 idea" | [`idea-forge`](idea-forge/) |
+| 调研文献 | "find recent papers on RLHF" / "文献调研" | [`lit-scout`](lit-scout/) |
+| 和已有工作做差异化 | "position my work vs DPO and IPO" / "差异化定位" | [`related-positioning`](related-positioning/) |
+| 设计实验 | "design experiment for X" / "实验方案" | [`method-architect`](method-architect/) |
+| 写论文章节 | "draft method section" / "写方法部分" | [`paper-writer`](paper-writer/) |
+| 画图表 | "plot accuracy vs context length" / "画图" | [`figure-smith`](figure-smith/) |
+| 校验完整性 / 引用 | "check citations" / "完整性检查" | [`integrity-check`](integrity-check/) |
+| 模拟评审 | "review my paper, NeurIPS-style" / "审稿" | [`paper-reviewer`](paper-reviewer/) |
+| 回复评审 | "write rebuttal" / "回复评审" | [`rebuttal-coach`](rebuttal-coach/) |
+| 投稿排版 | "format for NeurIPS 2026" / "排版投稿" | [`venue-formatter`](venue-formatter/) |
+| 走完整流程 | "full pipeline for this idea" / "全流程" | [`research-pipeline`](research-pipeline/) (可选 meta) |
 
-## Install
+完整触发词与消歧规则见 [`docs/COMMAND_INDEX.md`](docs/COMMAND_INDEX.md)。
 
-Skills live as Markdown files. Two install paths:
+---
 
-### Cursor / Claude Code (skill auto-discovery)
+## 安装（30 秒）
+
+ai-research-skills 是纯 Markdown skill 集合，没有运行时依赖（lint 脚本除外）。
+
+### Claude Code / Cursor（推荐）
 
 ```bash
-# clone into your skills directory
-git clone <this-repo> ~/.cursor/skills/ai-research-skills
-# or
-git clone <this-repo> ~/.claude/skills/ai-research-skills
+cd /path/to/your/project
+mkdir -p .claude/skills
+git clone https://github.com/Imbad0202/academic-research-skills.git \
+  .claude/skills/ai-research-skills
 ```
 
-Skills auto-trigger from natural-language phrases (each skill's `description` lists triggers).
+启动 Claude Code 后，自然语言触发即可。
 
-### Manual
+### 手动安装到其他 Agent
 
-Open the skill's `SKILL.md` in your assistant's context when you want to use it.
+把每个 `<skill>/SKILL.md` 注册为可触发的 system prompt fragment，触发词从 frontmatter 的 `description: Triggers:` 段读取。
 
-## Quick Start
+### 开发者依赖（可选）
 
-### "I have an interest area, no specific idea yet"
-
-```
-"Give me ideas on long-context LLM evaluation. 8 H100s for 2 months."
-```
-→ `idea-forge` produces ranked Idea Cards
-
-### "I have a research question, need to know what's been done"
-
-```
-"Find recent papers on long-context LLM evaluation since 2024."
-```
-→ `lit-scout` produces verified annotated bibliography
-
-### "I have a draft, want to know how it compares to known work"
-
-```
-"Position my work vs RULER, LongBench v2, NIAH-multi."
-```
-→ `related-positioning` produces differentiation matrix + Related Work draft
-
-### "I have results, need to write up the paper"
-
-```
-"Draft the Method section for the long-context similarity paper, NeurIPS style."
-```
-→ `paper-writer` produces section draft
-
-### "I have a draft, want pre-submission audit"
-
-```
-"Check citations and run the 7-mode failure checklist."
-```
-→ `integrity-check` produces verification report (BLOCK on issues)
-
-### "I want to know what reviewers will say"
-
-```
-"Run a NeurIPS-style review on my paper."
-```
-→ `paper-reviewer` produces 5 reviewer reports + meta-review
-
-### "Reviews came back, need to respond"
-
-```
-"Help me rebut these ICLR reviews. [paste]"
-```
-→ `rebuttal-coach` produces priority matrix + per-reviewer drafts within word budget
-
-### "Final compile and submission package"
-
-```
-"Format for NeurIPS submission. Include reproducibility checklist."
-```
-→ `venue-formatter` produces compiled PDF + checklist + disclosure
-
-## Skill Composition
-
-Skills hand off via `.ars-state/`. Common chains:
-
-```
-idea-forge → lit-scout → related-positioning → method-architect →
-paper-writer → figure-smith → integrity-check → paper-reviewer →
-venue-formatter
+```bash
+pip install -r requirements-dev.txt
+python scripts/check_skill_md_length.py
+python scripts/check_trigger_words.py
+python scripts/check_venue_db.py
+python scripts/check_spec_consistency.py
 ```
 
-Each handoff is OPTIONAL — the user can stop, skip, or restart at any point.
+---
 
-For users who want enforced orchestration with checkpoints, see [`research-pipeline`](research-pipeline/).
+## 设计原则
 
-## Supported Venues
+1. **原子优先** — 每个 skill 只做一件事；组合通过对话发生，不通过硬编码。
+2. **AI/ML 专用** — 默认 venue 是 NeurIPS / ICLR / ICML / ACL / EMNLP / CVPR / AAAI / arXiv，论文结构是 `intro → related → method → experiments → conclusion`。
+3. **自然语言触发** — 不需要记忆 slash command。每个 skill 在 frontmatter 声明 3-12 个非重叠触发词。
+4. **诚信优先** — `integrity-check` 是独立 skill，可以在任何阶段插入；7 类 AI 研究失败模式（hallucinated experiments, citation fabrication, etc.）有阻断式检查。
+5. **可恢复** — 每个 skill 把状态写到 `.ars-state/`，"resume" 即可继续。
+6. **不替代你的判断** — 所有创造性决策（idea 取舍、实验解读、reviewer 反馈如何改）都留给人。
 
-`shared/venue_db/` ships YAML knowledge bases for:
+---
 
-- **NeurIPS** — main ML venue
-- **ICLR** — OpenReview, multi-round rebuttal
-- **ICML** — formal ML
-- **ACL / EMNLP** — NLP, mandatory limitations + ethics
-- **CVPR** — computer vision, 1-page rebuttal
-- **AAAI** — broader AI
-- **arXiv** — preprint
+## 典型工作流
 
-Each YAML has page limits, template URL, review format, disclosure policy, reproducibility checklist URL, broader-impact requirements.
+### A. 想新 idea → 投稿
 
-## Design Principles
+```
+你: "想一些 long-context evaluation 方向的 idea"
+→ idea-forge 输出 5 个 idea card（含 novelty/feasibility/risk + Devil's Advocate 挑战）
 
-1. **Atomic over orchestrated** — every skill works on its own
-2. **Natural language triggers** — no slash commands, no mode flags
-3. **Block on integrity violations** — fabricated citations, unsupported claims, plagiarism
-4. **Anti-sycophancy** — adversarial agents don't capitulate without ≥4/5 evidence
-5. **Venue-aware** — page limits, disclosure, reproducibility from `shared/venue_db/`
-6. **AI/ML specialized** — not a general academic toolkit; assumes AI venue conventions
+你: "用第 3 个 idea 调研相关工作"
+→ lit-scout 找出 30 篇相关论文 + 验证 + 标注
 
-## Documentation
+你: "帮我设计实验"
+→ method-architect 给出 baselines / ablations / metrics / risk-of-bias
 
-- [`docs/COMMAND_INDEX.md`](docs/COMMAND_INDEX.md) — natural-language triggers per skill
-- [`docs/AI_VENUE_GUIDE.md`](docs/AI_VENUE_GUIDE.md) — what each AI/ML venue expects
-- [`docs/MIGRATION_v3_to_v4.md`](docs/MIGRATION_v3_to_v4.md) — moving from v3.3 to v4.0
-- [`CHANGELOG.md`](CHANGELOG.md) — version history
-- [`shared/`](shared/) — common agents, protocols, venue knowledge
+你: "写 method 和 experiments"
+→ paper-writer 起草
 
-## Status
+你: "画 accuracy vs context length 图"
+→ figure-smith 出图（matplotlib / tikz）
 
-- **Current**: v4.0.0 (2026-04) — BREAKING release
-- **Deprecated** (kept until 2026-10): `academic-paper`, `academic-paper-reviewer`, `academic-pipeline`, `deep-research` as top-level skills (their agents remain as references for atomic skills above)
+你: "完整性检查 + 模拟审稿"
+→ integrity-check + paper-reviewer
+
+你: "排版到 NeurIPS 格式"
+→ venue-formatter
+```
+
+### B. 收到评审意见 → rebuttal
+
+```
+你: "帮我解析这份 OpenReview 评审"
+→ rebuttal-coach review_parser → issue_inventory.yaml + 优先级
+
+你: "起草 rebuttal"
+→ rebuttal-coach response_drafter（限 word budget，按 venue 调风格）
+
+你: "再做一遍诚信检查"
+→ integrity-check
+```
+
+### C. 想偷懒走完整流程
+
+```
+你: "全流程，主题 long-context eval，目标 NeurIPS"
+→ research-pipeline 编排所有上面的 skill，3 个强制 checkpoint
+```
+
+---
+
+## 项目结构
+
+```
+ai-research-skills/
+├── README.md                    本文件
+├── CHANGELOG.md                 v4.0.0 BREAKING release notes
+├── LICENSE                      CC BY-NC 4.0
+├── SECURITY.md / CONTRIBUTING.md
+│
+├── idea-forge/                  ← 10 个原子 skill
+├── lit-scout/                       每个含 SKILL.md + agents/ + references/ + templates/
+├── related-positioning/
+├── method-architect/
+├── paper-writer/
+├── figure-smith/
+├── integrity-check/
+├── paper-reviewer/
+├── rebuttal-coach/
+├── venue-formatter/
+├── research-pipeline/           ← 可选 meta-skill，编排上面 10 个
+│
+├── shared/                      跨 skill 复用的资源
+│   ├── agents/                  socratic_mentor / devils_advocate / state_tracker
+│   ├── protocols/               anti_sycophancy / integrity_protocol
+│   ├── venue_db/                NeurIPS / ICLR / ICML / ACL / EMNLP / CVPR / AAAI / arXiv（YAML）
+│   └── *.md                     可复用的 pattern 文档（benchmark report / repro lock / 等）
+│
+├── docs/                        用户向文档
+│   ├── COMMAND_INDEX.md         完整触发词、消歧、handoff 链
+│   ├── AI_VENUE_GUIDE.md        AI venue 人工可读指南（venue_db 的 companion）
+│   └── MIGRATION_v3_to_v4.md    v3.3 → v4.0 完整迁移映射
+│
+├── scripts/                     CI lint 脚本
+│   ├── check_skill_md_length.py
+│   ├── check_trigger_words.py
+│   ├── check_venue_db.py
+│   ├── check_spec_consistency.py
+│   └── check_task_type.py / check_data_access_level.py 等
+│
+├── archive/                     ← v3.3 历史代码 / 文档
+│   ├── README.md                归档说明 + 移除时间表
+│   └── v3/                      4 个 v3 大 skill / v3 文档 / 旧 examples
+│
+└── .github/workflows/           CI（运行上面所有 lint）
+```
+
+---
+
+## 触发词速查（精简版）
+
+| Skill | 主触发词 | 备用触发词 |
+|---|---|---|
+| `idea-forge` | give me ideas / brainstorm | novelty check, 想 idea |
+| `lit-scout` | find papers / literature | bibliography, 文献调研 |
+| `related-positioning` | position / differentiate | related work, 差异化定位 |
+| `method-architect` | design experiment | baselines, ablation, 实验方案 |
+| `paper-writer` | draft / write section | polish, revise, 写论文 |
+| `figure-smith` | plot / figure | table, 画图 |
+| `integrity-check` | verify / check citations | audit, 完整性检查 |
+| `paper-reviewer` | review my paper | NeurIPS-style review, 审稿 |
+| `rebuttal-coach` | write rebuttal | respond to reviewers, 回复评审 |
+| `venue-formatter` | format for X / camera-ready | compile, 排版投稿 |
+
+完整触发词及消歧规则：[`docs/COMMAND_INDEX.md`](docs/COMMAND_INDEX.md)。
+
+---
+
+## v3.3.6 → v4.0 迁移
+
+旧版（`academic-research-skills` v3.3.6）的 4 大 skill 已移到 `archive/v3/`，6 个月后（**2026-10-20**）从默认分支删除。
+
+| 你以前用 | 现在改用 |
+|---|---|
+| `deep-research full` | `lit-scout` + `idea-forge` 组合 |
+| `deep-research lit-review` | `lit-scout` |
+| `deep-research socratic` | 任意 skill 后接 "guide me Socratically" |
+| `academic-paper full` | `paper-writer` + `figure-smith` + `venue-formatter` |
+| `academic-paper-reviewer full` | `paper-reviewer` |
+| `academic-pipeline` | `research-pipeline`（更轻量） |
+
+完整映射见 [`docs/MIGRATION_v3_to_v4.md`](docs/MIGRATION_v3_to_v4.md)。
+
+---
 
 ## License
 
-See `LICENSE`.
+[CC BY-NC 4.0](LICENSE) — source-available, **non-commercial**. 学术用途、教学、研究协作免费；商业 SaaS / 付费咨询服务需要单独授权。
+
+详见 [`SECURITY.md`](SECURITY.md) 和 [`CONTRIBUTING.md`](CONTRIBUTING.md)。
+
+---
+
+## 引用
+
+如果 ai-research-skills 在你发表的工作中起了作用，可以这样致谢：
+
+```
+We acknowledge the use of ai-research-skills v4.0.0 (https://github.com/Imbad0202/academic-research-skills)
+for {literature search / draft revision / integrity verification / rebuttal drafting}.
+All scientific decisions, experimental design, and final text are the authors' responsibility.
+```
+
+完整 AI 使用披露模板见 [`archive/v3/academic-paper/references/disclosure_mode_protocol.md`](archive/v3/academic-paper/references/disclosure_mode_protocol.md)（v4 inline 版本计划在 v4.1 引入）。

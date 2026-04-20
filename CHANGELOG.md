@@ -9,15 +9,15 @@ All notable changes to this project will be documented in this file.
 ### Added — 10 Atomic Skills
 
 - **`idea-forge`** (NEW) — AI/ML research idea generation with novelty/feasibility/risk scoring and Devil's Advocate stress-testing. Outputs ranked Idea Cards.
-- **`lit-scout`** — Literature search, verification (Semantic Scholar / arXiv), annotated bibliography. Wraps `deep-research/agents/bibliography_agent`.
+- **`lit-scout`** — Literature search, verification (Semantic Scholar / arXiv), annotated bibliography. Wraps `archive/v3/deep-research/agents/bibliography_agent`.
 - **`related-positioning`** (NEW) — Differentiate AI/ML work via 3-axis positioning matrix + reviewer-threat map + Related Work section draft.
-- **`method-architect`** — Experimental design (hypotheses, conditions, baselines, controls, statistical plan, ablations, reproducibility spec). Wraps `deep-research/agents/research_architect_agent`.
-- **`paper-writer`** — Section drafting with anti-leakage protocol and venue-aware style. Wraps `academic-paper/agents/draft_writer_agent` + `revision_coach_agent` + `abstract_bilingual_agent`.
-- **`figure-smith`** — Reproducible figure code (matplotlib/tikz/mermaid) + VLM verification + alt text. Wraps `academic-paper/agents/visualization_agent`.
-- **`integrity-check`** — Citation, claim, plagiarism, 7-mode AI failure-mode audit. Block-on-suspect verdict. Wraps `academic-pipeline/agents/integrity_verification_agent`.
-- **`paper-reviewer`** — 5-perspective AI venue peer review (Methodology / Domain / Perspective / DA / EIC) in venue's review format. Wraps existing `academic-paper-reviewer/agents/`.
+- **`method-architect`** — Experimental design (hypotheses, conditions, baselines, controls, statistical plan, ablations, reproducibility spec). Wraps `archive/v3/deep-research/agents/research_architect_agent`.
+- **`paper-writer`** — Section drafting with anti-leakage protocol and venue-aware style. Wraps `archive/v3/academic-paper/agents/draft_writer_agent` + `revision_coach_agent` + `abstract_bilingual_agent`.
+- **`figure-smith`** — Reproducible figure code (matplotlib/tikz/mermaid) + VLM verification + alt text. Wraps `archive/v3/academic-paper/agents/visualization_agent`.
+- **`integrity-check`** — Citation, claim, plagiarism, 7-mode AI failure-mode audit. Block-on-suspect verdict. Wraps `archive/v3/academic-pipeline/agents/integrity_verification_agent`.
+- **`paper-reviewer`** — 5-perspective AI venue peer review (Methodology / Domain / Perspective / DA / EIC) in venue's review format. Wraps existing `archive/v3/academic-paper-reviewer/agents/`.
 - **`rebuttal-coach`** (NEW) — OpenReview-style author response with priority matrix, per-reviewer drafts within venue word limits, revision plan, auditor.
-- **`venue-formatter`** — Venue-compliant compilation + disclosure + reproducibility checklist + broader impact + camera-ready helper. Wraps `academic-paper/agents/formatter_agent`.
+- **`venue-formatter`** — Venue-compliant compilation + disclosure + reproducibility checklist + broader impact + camera-ready helper. Wraps `archive/v3/academic-paper/agents/formatter_agent`.
 
 ### Added — Optional Meta-Skill
 
@@ -27,7 +27,7 @@ All notable changes to this project will be documented in this file.
 
 - `shared/agents/socratic_mentor.md` — consolidated from 2 prior copies.
 - `shared/agents/devils_advocate.md` — consolidated from 2 prior copies.
-- `shared/agents/state_tracker.md` — promoted from `academic-pipeline/agents/`.
+- `shared/agents/state_tracker.md` — promoted from `archive/v3/academic-pipeline/agents/`.
 - `shared/protocols/anti_sycophancy.md` — 4-Stop Rule reusable across skills.
 - `shared/protocols/integrity_protocol.md` — index pointing to v3 integrity infrastructure.
 - `shared/venue_db/` — 8 YAML files: NeurIPS, ICLR, ICML, ACL, EMNLP, CVPR, AAAI, arXiv. Each declares page limits, template, review format, disclosure policy, reproducibility checklist URL, broader-impact requirements.
@@ -58,7 +58,7 @@ All notable changes to this project will be documented in this file.
 
 ### Deprecated (kept until 2026-10)
 
-- Top-level `deep-research/`, `academic-paper/`, `academic-paper-reviewer/`, `academic-pipeline/` SKILL.md files. Their agent files remain as references for v4.0 atomic skills.
+- Top-level `archive/v3/deep-research/`, `archive/v3/academic-paper/`, `archive/v3/academic-paper-reviewer/`, `archive/v3/academic-pipeline/` SKILL.md files. Their agent files remain as references for v4.0 atomic skills.
 - v3.3 trigger phrases ("deep research", "academic paper", "academic pipeline") will route to closest v4.0 skill with one-line migration notice.
 
 ### Removed
@@ -114,7 +114,7 @@ v4.0 addresses all four via atomic skills, length-budgeted SKILL.md, 3-checkpoin
 
 ### Changed
 - `.github/workflows/spec-consistency.yml` installs via `pip install -r requirements-dev.txt` instead of ad-hoc `pip install`.
-- `academic-pipeline/references/reproducibility_audit.md` cross-links to new artifact-reproducibility pattern.
+- `archive/v3/academic-pipeline/references/reproducibility_audit.md` cross-links to new artifact-reproducibility pattern.
 
 ## [3.3.4] - 2026-04-15
 
@@ -134,7 +134,7 @@ v4.0 addresses all four via atomic skills, length-budgeted SKILL.md, 3-checkpoin
 - `scripts/check_spec_consistency.py` now validates README relative Markdown links so future dead links fail CI.
 
 ### Changed
-- DOCX generation contract aligned across README, `academic-paper/SKILL.md`, `academic-paper/agents/formatter_agent.md`, `academic-pipeline/SKILL.md`, and `academic-pipeline/agents/pipeline_orchestrator_agent.md`: direct `.docx` output is Pandoc-dependent, with Markdown + conversion instructions as the fallback.
+- DOCX generation contract aligned across README, `archive/v3/academic-paper/SKILL.md`, `archive/v3/academic-paper/agents/formatter_agent.md`, `archive/v3/academic-pipeline/SKILL.md`, and `archive/v3/academic-pipeline/agents/pipeline_orchestrator_agent.md`: direct `.docx` output is Pandoc-dependent, with Markdown + conversion instructions as the fallback.
 - Added regression tests covering missing closing fences and non-mapping YAML frontmatter in both lint test suites.
 - Suite version bumped to `3.3.3` across release-facing docs; `academic-paper` patch-bumped to `3.0.2` and `academic-pipeline` patch-bumped to `3.2.2`.
 
@@ -164,7 +164,7 @@ v4.0 addresses all four via atomic skills, length-budgeted SKILL.md, 3-checkpoin
 - Cross-model wording now matches the implemented scope: integrity sample verification and independent DA critique are shipped; sixth-reviewer peer review remains planned
 - `academic-pipeline` checkpoint docs now state that SLIM checkpoints still wait for explicit user confirmation
 - `academic-pipeline` integrity gate docs now consistently state that Stage 2.5 and Stage 4.5 cannot be skipped
-- `academic-paper/SKILL.md` mode-count heading and `academic-paper-reviewer/SKILL.md` Version Info block
+- `archive/v3/academic-paper/SKILL.md` mode-count heading and `archive/v3/academic-paper-reviewer/SKILL.md` Version Info block
 
 ### Added
 - `scripts/check_spec_consistency.py` to catch mode-count, version-block, and forbidden-claim drift
@@ -176,16 +176,16 @@ v4.0 addresses all four via atomic skills, length-budgeted SKILL.md, 3-checkpoin
 Integrates techniques from Song et al. (2026, *arXiv:2604.05018*) "PaperOrchestra: A Multi-Agent Framework for Automated AI Research Paper Writing."
 
 - **Semantic Scholar API Verification** (deep-research, academic-pipeline): Tier 0 programmatic reference verification via S2 API. Title search with Levenshtein >= 0.70 matching. DOI mismatch detection for Compound Deception Pattern #5. Bibliography deduplication via S2 IDs. Graceful degradation if API unavailable.
-  - New file: `deep-research/references/semantic_scholar_api_protocol.md`
+  - New file: `archive/v3/deep-research/references/semantic_scholar_api_protocol.md`
   - Modified: `source_verification_agent`, `bibliography_agent`, `integrity_verification_agent`
 - **Anti-Leakage Protocol** (academic-paper, deep-research): Knowledge Isolation Directive prioritizes session materials over LLM parametric memory for factual content. Flags `[MATERIAL GAP]` for missing content instead of silently filling from memory. Reduces Mode 5/6 failure risk.
-  - New file: `academic-paper/references/anti_leakage_protocol.md`
+  - New file: `archive/v3/academic-paper/references/anti_leakage_protocol.md`
   - Modified: `draft_writer_agent`, `report_compiler_agent`
 - **VLM Figure Verification** (academic-paper): Optional closed-loop verification of rendered figures using vision-capable LLM. 10-point checklist covering data accuracy, APA 7.0 compliance, and visual quality. Max 2 refinement iterations.
-  - New file: `academic-paper/references/vlm_figure_verification.md`
+  - New file: `archive/v3/academic-paper/references/vlm_figure_verification.md`
   - Modified: `visualization_agent`
 - **Score Trajectory Protocol** (academic-pipeline): Per-dimension rubric score delta tracking across revision rounds. Detects regressions (delta < -3) and triggers mandatory checkpoint. Extends v3.2 early-stopping with dimension-level granularity.
-  - New file: `academic-pipeline/references/score_trajectory_protocol.md`
+  - New file: `archive/v3/academic-pipeline/references/score_trajectory_protocol.md`
   - Modified: `integrity_review_protocol.md`, `handoff_schemas.md` (Schema 5)
 - **Stage 2 Parallelization Directive** (academic-pipeline): Visualization and argument building can run in parallel after outline completion.
 - **Handoff Schema Updates** (shared): `semantic_scholar_id` field added to Bibliography source object. `score_trajectory` structure added to Integrity Report schema.
@@ -198,11 +198,11 @@ Integrates techniques from Song et al. (2026, *arXiv:2604.05018*) "PaperOrchestr
 Integrates insights from Lu et al. (2026, *Nature* 651:914-919) — the first end-to-end autonomous AI research system to pass blind peer review.
 
 - **AI Research Failure Mode Checklist** (academic-pipeline): 7-mode taxonomy extending the existing 5-type citation hallucination taxonomy. Covers implementation-bug blindness, hallucinated experimental results, shortcut reliance, bug-as-insight, methodology fabrication, and pipeline-level frame-lock. Runs at Stage 2.5 and 4.5 with mandatory blocking behaviour. Reported at Stage 6 in the Failure Mode Audit Log subsection of the AI Self-Reflection Report.
-  - New file: `academic-pipeline/references/ai_research_failure_modes.md`
+  - New file: `archive/v3/academic-pipeline/references/ai_research_failure_modes.md`
 - **Reviewer Calibration Mode** (academic-paper-reviewer v1.8): opt-in mode that measures FNR / FPR / balanced accuracy / AUC against a user-supplied gold-standard set of 5-20 papers. Uses 5x ensembling with fresh context per run. Cross-model verification default-on. Session-scoped confidence disclosure.
-  - New file: `academic-paper-reviewer/references/calibration_mode_protocol.md`
+  - New file: `archive/v3/academic-paper-reviewer/references/calibration_mode_protocol.md`
 - **Disclosure Mode** (academic-paper v2.9): venue-specific AI-usage disclosure statement generator. v1 database covers ICLR, NeurIPS, Nature, Science, ACL, EMNLP. Unknown venues halt and prompt user to paste policy.
-  - New files: `academic-paper/references/disclosure_mode_protocol.md`, `academic-paper/references/venue_disclosure_policies.md`
+  - New files: `archive/v3/academic-paper/references/disclosure_mode_protocol.md`, `archive/v3/academic-paper/references/venue_disclosure_policies.md`
 - **Fidelity-Originality Mode Spectrum** (all skills): classifies all modes on a fidelity–originality axis per Lu 2026 Fig 1c. Quick Mode Selection Guides updated with Spectrum column.
   - New file: `shared/mode_spectrum.md`
 - **Early-Stopping Criterion** (academic-pipeline v3.1): convergence check (delta < 3 points + no P0) suggests stopping revision loop. Budget transparency estimate at pipeline start.
@@ -218,7 +218,7 @@ Integrates insights from Lu et al. (2026, *Nature* 651:914-919) — the first en
 
 ### Added
 - **Information Systems — Senior Scholars' Basket of 11** (extending the *Basket of 8* added in v2.9): *Decision Support Systems*, *Information & Management*, *Information and Organization* — completing the AIS College of Senior Scholars' official list of premier IS journals
-- Section heading updated from "Information Systems (Basket of 8)" to "Information Systems (Senior Scholars' Basket of 11)" in `academic-paper-reviewer/references/top_journals_by_field.md`
+- Section heading updated from "Information Systems (Basket of 8)" to "Information Systems (Senior Scholars' Basket of 11)" in `archive/v3/academic-paper-reviewer/references/top_journals_by_field.md`
 - Original IS Basket of 8 proposed and drafted by [@mchesbro1](https://github.com/mchesbro1) — [Issue #5](https://github.com/Imbad0202/academic-research-skills/issues/5). Extended to Basket of 11 by [@cloudenochcsis](https://github.com/cloudenochcsis) — [Issue #7](https://github.com/Imbad0202/academic-research-skills/issues/7), [PR #8](https://github.com/Imbad0202/academic-research-skills/pull/8). Source: [AIS Senior Scholars' List of Premier Journals](https://aisnet.org/page/SeniorScholarListofPremierJournals)
 
 ## [2.9.1] - 2026-04-03
@@ -251,9 +251,9 @@ Integrates insights from Lu et al. (2026, *Nature* 651:914-919) — the first en
   - Adaptive intensity (tracks commitment accuracy, adjusts challenge frequency)
   - Self-calibration signal (S5) for convergence detection
   - SCR Switch — users can disable/re-enable predictions mid-dialogue
-- `deep-research/agents/socratic_mentor_agent.md` — SCR Protocol section with commitment gates, divergence reveal, and adaptive intensity
-- `deep-research/references/socratic_questioning_framework.md` — SCR Overlay Protocol mapping SCR phases to Socratic functions
-- `academic-paper/agents/socratic_mentor_agent.md` — Chapter-level SCR Protocol with per-chapter commitment questions and cross-chapter pattern tracking
+- `archive/v3/deep-research/agents/socratic_mentor_agent.md` — SCR Protocol section with commitment gates, divergence reveal, and adaptive intensity
+- `archive/v3/deep-research/references/socratic_questioning_framework.md` — SCR Overlay Protocol mapping SCR phases to Socratic functions
+- `archive/v3/academic-paper/agents/socratic_mentor_agent.md` — Chapter-level SCR Protocol with per-chapter commitment questions and cross-chapter pattern tracking
 
 ## [2.7.3] - 2026-03-10
 

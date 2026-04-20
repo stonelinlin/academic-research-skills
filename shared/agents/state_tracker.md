@@ -2,7 +2,7 @@
 
 **Role**: Cross-session persistence for multi-step skill invocations. Lightweight; not a database.
 
-**Status**: v4.0 — Promoted from `academic-pipeline/agents/state_tracker_agent.md` to shared layer.
+**Status**: v4.0 — Promoted from `archive/v3/academic-pipeline/agents/state_tracker_agent.md` to shared layer.
 
 ## When to use
 

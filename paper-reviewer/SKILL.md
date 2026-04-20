@@ -129,13 +129,13 @@ flowchart TD
 
 | Agent | Role | File |
 |---|---|---|
-| `field_analyst_agent` | Identify sub-area, calibrate severity | [`academic-paper-reviewer/agents/field_analyst_agent.md`](../academic-paper-reviewer/agents/field_analyst_agent.md) |
-| `methodology_reviewer_agent` | Methods rigor | [`academic-paper-reviewer/agents/methodology_reviewer_agent.md`](../academic-paper-reviewer/agents/methodology_reviewer_agent.md) |
-| `domain_reviewer_agent` | Sub-field expertise | [`academic-paper-reviewer/agents/domain_reviewer_agent.md`](../academic-paper-reviewer/agents/domain_reviewer_agent.md) |
-| `perspective_reviewer_agent` | Underrepresented angle (e.g., applied / theoretical) | [`academic-paper-reviewer/agents/perspective_reviewer_agent.md`](../academic-paper-reviewer/agents/perspective_reviewer_agent.md) |
+| `field_analyst_agent` | Identify sub-area, calibrate severity | [`archive/v3/academic-paper-reviewer/agents/field_analyst_agent.md`](../archive/v3/academic-paper-reviewer/agents/field_analyst_agent.md) |
+| `methodology_reviewer_agent` | Methods rigor | [`archive/v3/academic-paper-reviewer/agents/methodology_reviewer_agent.md`](../archive/v3/academic-paper-reviewer/agents/methodology_reviewer_agent.md) |
+| `domain_reviewer_agent` | Sub-field expertise | [`archive/v3/academic-paper-reviewer/agents/domain_reviewer_agent.md`](../archive/v3/academic-paper-reviewer/agents/domain_reviewer_agent.md) |
+| `perspective_reviewer_agent` | Underrepresented angle (e.g., applied / theoretical) | [`archive/v3/academic-paper-reviewer/agents/perspective_reviewer_agent.md`](../archive/v3/academic-paper-reviewer/agents/perspective_reviewer_agent.md) |
 | `devils_advocate` (shared) | Adversarial critique | [`shared/agents/devils_advocate.md`](../shared/agents/devils_advocate.md) |
-| `eic_agent` | EIC synthesis | [`academic-paper-reviewer/agents/eic_agent.md`](../academic-paper-reviewer/agents/eic_agent.md) |
-| `editorial_synthesizer_agent` | Final meta-review compilation | [`academic-paper-reviewer/agents/editorial_synthesizer_agent.md`](../academic-paper-reviewer/agents/editorial_synthesizer_agent.md) |
+| `eic_agent` | EIC synthesis | [`archive/v3/academic-paper-reviewer/agents/eic_agent.md`](../archive/v3/academic-paper-reviewer/agents/eic_agent.md) |
+| `editorial_synthesizer_agent` | Final meta-review compilation | [`archive/v3/academic-paper-reviewer/agents/editorial_synthesizer_agent.md`](../archive/v3/academic-paper-reviewer/agents/editorial_synthesizer_agent.md) |
 
 ## IRON RULES
 

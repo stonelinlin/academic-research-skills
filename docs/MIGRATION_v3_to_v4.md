@@ -85,7 +85,7 @@ v4.0 is a **BREAKING release**. This guide maps the old structure to the new one
 ## Backward Compatibility (6-month window)
 
 Until 2026-10:
-- v3.3 top-level skills (`deep-research`, `academic-paper`, `academic-paper-reviewer`, `academic-pipeline`) remain as **read-only references**. Their agent files are still pointed to by v4.0 atomic skills (e.g., `lit-scout` references `deep-research/agents/bibliography_agent.md`).
+- v3.3 top-level skills (`deep-research`, `academic-paper`, `academic-paper-reviewer`, `academic-pipeline`) remain as **read-only references**. Their agent files are still pointed to by v4.0 atomic skills (e.g., `lit-scout` references `archive/v3/deep-research/agents/bibliography_agent.md`).
 - v3.3 trigger phrases like "deep research" or "academic paper" will route to the closest v4.0 atomic skill with a one-line migration notice.
 - After 2026-10, v3.3 directories will be moved to `legacy/` and triggers removed.
 

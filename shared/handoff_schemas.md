@@ -12,8 +12,8 @@ Consuming agents should validate input and request re-generation if schema viola
 
 ## Schema 1: RQ Brief (deep-research -> academic-paper)
 
-**Producer**: `deep-research/research_question_agent` | `deep-research/socratic_mentor_agent`
-**Consumer**: `deep-research/research_architect_agent` | `academic-paper/intake_agent`
+**Producer**: `archive/v3/deep-research/research_question_agent` | `archive/v3/deep-research/socratic_mentor_agent`
+**Consumer**: `archive/v3/deep-research/research_architect_agent` | `archive/v3/academic-paper/intake_agent`
 
 ### Required Fields
 
@@ -70,8 +70,8 @@ Consuming agents should validate input and request re-generation if schema viola
 
 ## Schema 2: Bibliography (deep-research -> academic-paper)
 
-**Producer**: `deep-research/bibliography_agent`
-**Consumer**: `deep-research/synthesis_agent` | `deep-research/source_verification_agent` | `academic-paper/literature_strategist_agent`
+**Producer**: `archive/v3/deep-research/bibliography_agent`
+**Consumer**: `archive/v3/deep-research/synthesis_agent` | `archive/v3/deep-research/source_verification_agent` | `archive/v3/academic-paper/literature_strategist_agent`
 
 ### Required Fields
 
@@ -135,8 +135,8 @@ Consuming agents should validate input and request re-generation if schema viola
 
 ## Schema 3: Synthesis Report (deep-research -> academic-paper)
 
-**Producer**: `deep-research/synthesis_agent`
-**Consumer**: `deep-research/report_compiler_agent` | `academic-paper/argument_builder_agent`
+**Producer**: `archive/v3/deep-research/synthesis_agent`
+**Consumer**: `archive/v3/deep-research/report_compiler_agent` | `archive/v3/academic-paper/argument_builder_agent`
 
 ### Required Fields
 
@@ -195,8 +195,8 @@ AI-assisted assessment's primary advantage lies in the immediacy of feedback, re
 
 ## Schema 4: Paper Draft (academic-paper -> integrity/reviewer)
 
-**Producer**: `academic-paper/draft_writer_agent`
-**Consumer**: `academic-pipeline/integrity_verification_agent` | `academic-paper-reviewer/*`
+**Producer**: `archive/v3/academic-paper/draft_writer_agent`
+**Consumer**: `archive/v3/academic-pipeline/integrity_verification_agent` | `archive/v3/academic-paper-reviewer/*`
 
 ### Required Fields
 
@@ -246,8 +246,8 @@ AI-assisted assessment's primary advantage lies in the immediacy of feedback, re
 
 ## Schema 5: Integrity Report (integrity_verification_agent -> pipeline)
 
-**Producer**: `academic-pipeline/integrity_verification_agent`
-**Consumer**: `academic-pipeline/pipeline_orchestrator_agent` | `academic-paper/draft_writer_agent` (for revision)
+**Producer**: `archive/v3/academic-pipeline/integrity_verification_agent`
+**Consumer**: `archive/v3/academic-pipeline/pipeline_orchestrator_agent` | `archive/v3/academic-paper/draft_writer_agent` (for revision)
 
 ### Required Fields
 
@@ -298,7 +298,7 @@ phases: {
 
 Present only when the integrity report is for a re-review (Stage 3' or 4'). Tracks rubric score changes across revision rounds.
 
-Dimensions match the 7 universal review dimensions from `academic-paper-reviewer/references/review_criteria_framework.md` plus an overall score:
+Dimensions match the 7 universal review dimensions from `archive/v3/academic-paper-reviewer/references/review_criteria_framework.md` plus an overall score:
 
 ```
 score_trajectory: {
@@ -353,8 +353,8 @@ score_trajectory: {
 
 ## Schema 6: Review Report (academic-paper-reviewer -> pipeline)
 
-**Producer**: `academic-paper-reviewer/editorial_synthesizer_agent`
-**Consumer**: `academic-pipeline/pipeline_orchestrator_agent` | `academic-paper/draft_writer_agent`
+**Producer**: `archive/v3/academic-paper-reviewer/editorial_synthesizer_agent`
+**Consumer**: `archive/v3/academic-pipeline/pipeline_orchestrator_agent` | `archive/v3/academic-paper/draft_writer_agent`
 
 ### Required Fields
 
@@ -389,8 +389,8 @@ score_trajectory: {
 
 ## Schema 7: Revision Roadmap (reviewer -> academic-paper revision)
 
-**Producer**: `academic-paper-reviewer/editorial_synthesizer_agent`
-**Consumer**: `academic-paper/draft_writer_agent` | `academic-pipeline/pipeline_orchestrator_agent`
+**Producer**: `archive/v3/academic-paper-reviewer/editorial_synthesizer_agent`
+**Consumer**: `archive/v3/academic-paper/draft_writer_agent` | `archive/v3/academic-pipeline/pipeline_orchestrator_agent`
 
 ### Required Fields
 
@@ -427,8 +427,8 @@ score_trajectory: {
 
 ## Schema 8: Response to Reviewers (academic-paper revision -> reviewer re-review)
 
-**Producer**: `academic-paper/draft_writer_agent` (revision mode)
-**Consumer**: `academic-paper-reviewer/editorial_synthesizer_agent` (re-review)
+**Producer**: `archive/v3/academic-paper/draft_writer_agent` (revision mode)
+**Consumer**: `archive/v3/academic-paper-reviewer/editorial_synthesizer_agent` (re-review)
 
 ### Required Fields
 
@@ -520,8 +520,8 @@ score_trajectory: {
 
 ## Schema 10: Style Profile (intake -> draft_writer / report_compiler)
 
-**Producer**: `academic-paper/agents/intake_agent` (Step 10)
-**Consumer**: `academic-paper/agents/draft_writer_agent`, `deep-research/agents/report_compiler_agent`
+**Producer**: `archive/v3/academic-paper/agents/intake_agent` (Step 10)
+**Consumer**: `archive/v3/academic-paper/agents/draft_writer_agent`, `archive/v3/deep-research/agents/report_compiler_agent`
 **Carried by**: `academic-pipeline` Material Passport (optional field)
 
 ### Required Fields

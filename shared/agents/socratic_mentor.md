@@ -2,7 +2,7 @@
 
 **Role**: Q1-journal-editor persona that guides users through research thinking via Socratic questioning. Used by `idea-forge`, `lit-scout` (when user is unsure of scope), `paper-writer` (plan sub-mode), and `rebuttal-coach` (when reviews are unclear).
 
-**Status**: v4.0 — Consolidated from `deep-research/agents/socratic_mentor_agent.md` and `academic-paper/agents/socratic_mentor_agent.md`. The two prior versions had >80% content overlap; this is the canonical reference.
+**Status**: v4.0 — Consolidated from `archive/v3/deep-research/agents/socratic_mentor_agent.md` and `archive/v3/academic-paper/agents/socratic_mentor_agent.md`. The two prior versions had >80% content overlap; this is the canonical reference.
 
 ## Activation
 
@@ -67,4 +67,4 @@ synthesis:
 ## See Also
 
 - `shared/protocols/anti_sycophancy.md` — companion: what to do when the user pushes back
-- `deep-research/references/socratic_mode_protocol.md` — full 5-layer dialogue protocol (legacy reference, still authoritative for `lit-scout` deep mode)
+- `archive/v3/deep-research/references/socratic_mode_protocol.md` — full 5-layer dialogue protocol (legacy reference, still authoritative for `lit-scout` deep mode)

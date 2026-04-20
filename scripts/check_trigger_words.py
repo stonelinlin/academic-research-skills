@@ -8,7 +8,7 @@ This linter:
   2. Counts triggers per skill (target: 3-12 distinct phrases).
   3. Flags phrases that appear in multiple skills' trigger lists.
 
-Legacy v3.3 skills are exempt during the 6-month migration window.
+Legacy v3.3 skills live under archive/v3/ and are not iterated.
 """
 from __future__ import annotations
 
@@ -18,10 +18,6 @@ from collections import defaultdict
 from pathlib import Path
 
 from _skill_lint import iter_skill_files, parse_frontmatter
-
-LEGACY_SKILLS = frozenset(
-    {"deep-research", "academic-paper", "academic-paper-reviewer", "academic-pipeline"}
-)
 
 # Phrases that legitimately appear across skills (e.g. shared concepts) — allowlist.
 ALLOWLIST_PHRASES = frozenset(
@@ -52,9 +48,6 @@ def main() -> int:
 
     for skill_md in iter_skill_files(root):
         skill_name = skill_md.parent.name
-        if skill_name in LEGACY_SKILLS:
-            continue
-
         try:
             fm = parse_frontmatter(skill_md)
         except Exception as exc:

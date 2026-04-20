@@ -101,14 +101,14 @@ flowchart TD
 
 | Agent | Role | File |
 |---|---|---|
-| `bibliography_agent` | Multi-source search, verification, annotation | [`deep-research/agents/bibliography_agent.md`](../deep-research/agents/bibliography_agent.md) |
-| `source_verification_agent` | Cross-check titles, DOIs, citation counts | [`deep-research/agents/source_verification_agent.md`](../deep-research/agents/source_verification_agent.md) |
+| `bibliography_agent` | Multi-source search, verification, annotation | [`archive/v3/deep-research/agents/bibliography_agent.md`](../archive/v3/deep-research/agents/bibliography_agent.md) |
+| `source_verification_agent` | Cross-check titles, DOIs, citation counts | [`archive/v3/deep-research/agents/source_verification_agent.md`](../archive/v3/deep-research/agents/source_verification_agent.md) |
 | `socratic_mentor` (shared) | Used when topic is too vague | [`shared/agents/socratic_mentor.md`](../shared/agents/socratic_mentor.md) |
 
 ## Key Protocols
 
-- [`deep-research/references/semantic_scholar_api_protocol.md`](../deep-research/references/semantic_scholar_api_protocol.md) — Semantic Scholar verification
-- [`deep-research/references/citation_protocols.md`](../deep-research/references/citation_protocols.md) — citation hygiene rules
+- [`archive/v3/deep-research/references/semantic_scholar_api_protocol.md`](../archive/v3/deep-research/references/semantic_scholar_api_protocol.md) — Semantic Scholar verification
+- [`archive/v3/deep-research/references/cross_agent_quality_definitions.md`](../archive/v3/deep-research/references/cross_agent_quality_definitions.md) — citation hygiene + verification thresholds
 - [`shared/protocols/integrity_protocol.md`](../shared/protocols/integrity_protocol.md) — verification routing
 
 ## IRON RULES

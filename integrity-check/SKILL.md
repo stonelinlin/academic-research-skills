@@ -85,7 +85,7 @@ citations:
 
 ### 3. 7-Mode AI Failure Audit
 
-Per [`academic-pipeline/references/ai_research_failure_modes.md`](../academic-pipeline/references/ai_research_failure_modes.md):
+Per [`archive/v3/academic-pipeline/references/ai_research_failure_modes.md`](../archive/v3/academic-pipeline/references/ai_research_failure_modes.md):
 
 ```yaml
 failure_modes:
@@ -110,7 +110,7 @@ failure_modes:
 
 ### 4. Plagiarism / Self-Plagiarism / AI-Text Audit
 
-Per [`academic-pipeline/references/plagiarism_detection_protocol.md`](../academic-pipeline/references/plagiarism_detection_protocol.md).
+Per [`archive/v3/academic-pipeline/references/plagiarism_detection_protocol.md`](../archive/v3/academic-pipeline/references/plagiarism_detection_protocol.md).
 
 ### 5. Reproducibility Checklist
 
@@ -148,16 +148,16 @@ flowchart TD
 
 | Agent | Role | File |
 |---|---|---|
-| `integrity_verification_agent` | Core verifier | [`academic-pipeline/agents/integrity_verification_agent.md`](../academic-pipeline/agents/integrity_verification_agent.md) |
-| `source_verification_agent` | Citation API checks | [`deep-research/agents/source_verification_agent.md`](../deep-research/agents/source_verification_agent.md) |
-| `citation_compliance_agent` | Style + bib coherence | [`academic-paper/agents/citation_compliance_agent.md`](../academic-paper/agents/citation_compliance_agent.md) |
+| `integrity_verification_agent` | Core verifier | [`archive/v3/academic-pipeline/agents/integrity_verification_agent.md`](../archive/v3/academic-pipeline/agents/integrity_verification_agent.md) |
+| `source_verification_agent` | Citation API checks | [`archive/v3/deep-research/agents/source_verification_agent.md`](../archive/v3/deep-research/agents/source_verification_agent.md) |
+| `citation_compliance_agent` | Style + bib coherence | [`archive/v3/academic-paper/agents/citation_compliance_agent.md`](../archive/v3/academic-paper/agents/citation_compliance_agent.md) |
 
 ## Key Protocols
 
-- [`academic-pipeline/references/integrity_review_protocol.md`](../academic-pipeline/references/integrity_review_protocol.md) — 5-phase verification flow
-- [`academic-pipeline/references/ai_research_failure_modes.md`](../academic-pipeline/references/ai_research_failure_modes.md) — 7-mode checklist
-- [`academic-pipeline/references/claim_verification_protocol.md`](../academic-pipeline/references/claim_verification_protocol.md) — claim extraction
-- [`academic-pipeline/references/plagiarism_detection_protocol.md`](../academic-pipeline/references/plagiarism_detection_protocol.md)
+- [`archive/v3/academic-pipeline/references/integrity_review_protocol.md`](../archive/v3/academic-pipeline/references/integrity_review_protocol.md) — 5-phase verification flow
+- [`archive/v3/academic-pipeline/references/ai_research_failure_modes.md`](../archive/v3/academic-pipeline/references/ai_research_failure_modes.md) — 7-mode checklist
+- [`archive/v3/academic-pipeline/references/claim_verification_protocol.md`](../archive/v3/academic-pipeline/references/claim_verification_protocol.md) — claim extraction
+- [`archive/v3/academic-pipeline/references/plagiarism_detection_protocol.md`](../archive/v3/academic-pipeline/references/plagiarism_detection_protocol.md)
 - [`shared/protocols/integrity_protocol.md`](../shared/protocols/integrity_protocol.md) — overview
 
 ## IRON RULES (block-on-suspect)

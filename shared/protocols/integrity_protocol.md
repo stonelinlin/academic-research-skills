@@ -10,14 +10,14 @@ Citation, claim, data, and reproducibility verification. Used by `integrity-chec
 
 | Concern | Authoritative Reference | Owned by |
 |---|---|---|
-| 5-phase citation/claim verification | [`academic-pipeline/references/integrity_review_protocol.md`](../../academic-pipeline/references/integrity_review_protocol.md) | integrity-check |
-| 7-mode AI research failure checklist | [`academic-pipeline/references/ai_research_failure_modes.md`](../../academic-pipeline/references/ai_research_failure_modes.md) | integrity-check + paper-reviewer |
-| Claim extraction & source tracing | [`academic-pipeline/references/claim_verification_protocol.md`](../../academic-pipeline/references/claim_verification_protocol.md) | integrity-check |
-| Plagiarism / self-plagiarism / AI-text detection | [`academic-pipeline/references/plagiarism_detection_protocol.md`](../../academic-pipeline/references/plagiarism_detection_protocol.md) | integrity-check |
-| Semantic Scholar API verification | [`deep-research/references/semantic_scholar_api_protocol.md`](../../deep-research/references/semantic_scholar_api_protocol.md) | lit-scout + integrity-check |
-| Anti-leakage (knowledge isolation) | [`academic-paper/references/anti_leakage_protocol.md`](../../academic-paper/references/anti_leakage_protocol.md) | paper-writer |
-| VLM figure verification | [`academic-paper/references/vlm_figure_verification.md`](../../academic-paper/references/vlm_figure_verification.md) | figure-smith |
-| Reproducibility audit | [`academic-pipeline/references/reproducibility_audit.md`](../../academic-pipeline/references/reproducibility_audit.md) | integrity-check |
+| 5-phase citation/claim verification | [`archive/v3/academic-pipeline/references/integrity_review_protocol.md`](../../archive/v3/academic-pipeline/references/integrity_review_protocol.md) | integrity-check |
+| 7-mode AI research failure checklist | [`archive/v3/academic-pipeline/references/ai_research_failure_modes.md`](../../archive/v3/academic-pipeline/references/ai_research_failure_modes.md) | integrity-check + paper-reviewer |
+| Claim extraction & source tracing | [`archive/v3/academic-pipeline/references/claim_verification_protocol.md`](../../archive/v3/academic-pipeline/references/claim_verification_protocol.md) | integrity-check |
+| Plagiarism / self-plagiarism / AI-text detection | [`archive/v3/academic-pipeline/references/plagiarism_detection_protocol.md`](../../archive/v3/academic-pipeline/references/plagiarism_detection_protocol.md) | integrity-check |
+| Semantic Scholar API verification | [`archive/v3/deep-research/references/semantic_scholar_api_protocol.md`](../../archive/v3/deep-research/references/semantic_scholar_api_protocol.md) | lit-scout + integrity-check |
+| Anti-leakage (knowledge isolation) | [`archive/v3/academic-paper/references/anti_leakage_protocol.md`](../../archive/v3/academic-paper/references/anti_leakage_protocol.md) | paper-writer |
+| VLM figure verification | [`archive/v3/academic-paper/references/vlm_figure_verification.md`](../../archive/v3/academic-paper/references/vlm_figure_verification.md) | figure-smith |
+| Reproducibility audit | [`archive/v3/academic-pipeline/references/reproducibility_audit.md`](../../archive/v3/academic-pipeline/references/reproducibility_audit.md) | integrity-check |
 | Material Passport schema | [`shared/handoff_schemas.md`](../handoff_schemas.md) Schema 9 | integrity-check |
 | Repro lock | [`shared/artifact_reproducibility_pattern.md`](../artifact_reproducibility_pattern.md) | integrity-check |
 

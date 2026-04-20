@@ -130,14 +130,15 @@ flowchart TD
 
 | Agent | Role | File |
 |---|---|---|
-| `formatter_agent` | Template injection + compile | [`academic-paper/agents/formatter_agent.md`](../academic-paper/agents/formatter_agent.md) |
-| `citation_compliance_agent` | Bib coherence + style match | [`academic-paper/agents/citation_compliance_agent.md`](../academic-paper/agents/citation_compliance_agent.md) |
+| `formatter_agent` | Template injection + compile | [`archive/v3/academic-paper/agents/formatter_agent.md`](../archive/v3/academic-paper/agents/formatter_agent.md) |
+| `citation_compliance_agent` | Bib coherence + style match | [`archive/v3/academic-paper/agents/citation_compliance_agent.md`](../archive/v3/academic-paper/agents/citation_compliance_agent.md) |
 
 ## Key Protocols
 
 - [`shared/venue_db/<venue>.yaml`](../shared/venue_db/) — page limits, template, checklist URLs
-- [`academic-paper/references/disclosure_protocol.md`](../academic-paper/references/disclosure_protocol.md) — AI use disclosure
-- [`shared/templates/`](../shared/templates/) — venue LaTeX templates (links to upstream)
+- [`archive/v3/academic-paper/references/disclosure_mode_protocol.md`](../archive/v3/academic-paper/references/disclosure_mode_protocol.md) — AI use disclosure (legacy v3 reference)
+- [`archive/v3/academic-paper/references/venue_disclosure_policies.md`](../archive/v3/academic-paper/references/venue_disclosure_policies.md) — venue-specific disclosure policy matrix
+- `shared/venue_db/*.yaml` `template:` field — link to each venue's official LaTeX template
 
 ## Modes
 
