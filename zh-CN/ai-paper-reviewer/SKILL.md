@@ -60,9 +60,9 @@ flowchart TD
     EIC --> Format --> Output
 ```
 
-## Agents（复用 v3）
+## Agents（`shared/agents`）
 
-路径均指向 [`../../archive/v3/academic-paper-reviewer/agents/`](../../archive/v3/academic-paper-reviewer/agents/) 与 [`../../shared/agents/devils_advocate.md`](../../shared/agents/devils_advocate.md)。
+路径均指向 [`../../shared/agents/`](../../shared/agents/)（含各 reviewer agent 与 [`../../shared/agents/devils_advocate.md`](../../shared/agents/devils_advocate.md)）。
 
 ## 铁律
 

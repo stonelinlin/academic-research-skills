@@ -106,7 +106,7 @@ project/
 
 | Agent | Role | File |
 |---|---|---|
-| `pipeline_orchestrator_agent` | Stage transitions and checkpoint logic | [`archive/v3/academic-pipeline/agents/pipeline_orchestrator_agent.md`](../archive/v3/academic-pipeline/agents/pipeline_orchestrator_agent.md) |
+| `pipeline_orchestrator_agent` | Stage transitions and checkpoint logic | [`shared/agents/pipeline_orchestrator_agent.md`](../shared/agents/pipeline_orchestrator_agent.md) |
 | `state_tracker` (shared) | Cross-stage state persistence | [`shared/agents/state_tracker.md`](../shared/agents/state_tracker.md) |
 
 ## IRON RULES
@@ -140,5 +140,5 @@ project/
 ## See Also
 
 - All 10 atomic skills above
-- [`academic-pipeline`](../archive/v3/academic-pipeline/) (legacy v3.3) — for the original 10-stage strict pipeline; deprecated but kept for backward compat during 6-month migration
+- Frozen v3.3 `academic-pipeline` snapshot (read-only, for historical comparison): [`archive/v3/academic-pipeline/`](../archive/v3/academic-pipeline/)
 - [`docs/COMMAND_INDEX.md`](../docs/COMMAND_INDEX.md) — atomic skill triggers

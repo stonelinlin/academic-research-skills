@@ -57,18 +57,18 @@ flowchart TD
     Intake --> Extract --> Sample --> Verify --> APIcheck --> Failures --> Plag --> Repro --> Verdict --> Output
 ```
 
-## Agents（复用 v3）
+## Agents（`shared/agents`）
 
 | Agent | 文件 |
 |---|---|
-| `integrity_verification_agent` | [`../../archive/v3/academic-pipeline/agents/integrity_verification_agent.md`](../../archive/v3/academic-pipeline/agents/integrity_verification_agent.md) |
-| `source_verification_agent` | [`../../archive/v3/deep-research/agents/source_verification_agent.md`](../../archive/v3/deep-research/agents/source_verification_agent.md) |
-| `citation_compliance_agent` | [`../../archive/v3/academic-paper/agents/citation_compliance_agent.md`](../../archive/v3/academic-paper/agents/citation_compliance_agent.md) |
+| `integrity_verification_agent` | [`../../shared/agents/integrity_verification_agent.md`](../../shared/agents/integrity_verification_agent.md) |
+| `source_verification_agent` | [`../../shared/agents/source_verification_agent.md`](../../shared/agents/source_verification_agent.md) |
+| `citation_compliance_agent` | [`../../shared/agents/citation_compliance_agent.md`](../../shared/agents/citation_compliance_agent.md) |
 
 ## 关键协议
 
-- [`../../archive/v3/academic-pipeline/references/ai_research_failure_modes.md`](../../archive/v3/academic-pipeline/references/ai_research_failure_modes.md)  
-- [`../../archive/v3/academic-pipeline/references/integrity_review_protocol.md`](../../archive/v3/academic-pipeline/references/integrity_review_protocol.md)  
+- [`../../shared/references/ai_research_failure_modes.md`](../../shared/references/ai_research_failure_modes.md)  
+- [`../../shared/references/integrity_review_protocol.md`](../../shared/references/integrity_review_protocol.md)  
 - [`../../shared/protocols/integrity_protocol.md`](../../shared/protocols/integrity_protocol.md)
 
 ## 铁律（疑似即阻断）

@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
-- **`zh-CN/`** — Simplified Chinese translations of all 11 v4 skill `SKILL.md` files (`zh-CN/ai-*/SKILL.md`) plus `zh-CN/README.md` explaining layout, symlink strategy for Claude Code/Cursor, and that `agents/` / `archive/` / `shared/` remain English-only.
+- **`zh-CN/`** — Simplified Chinese translations of all 11 v4 skill `SKILL.md` files (`zh-CN/ai-*/SKILL.md`) plus `zh-CN/README.md` explaining layout, symlink strategy for Claude Code/Cursor, and that linked agent/protocol sources under `shared/` remain English-only.
 - **`metadata.language: zh-CN`** on each translated `SKILL.md` frontmatter.
 - **CI**: `scripts/check_spec_consistency.py` now asserts `zh-CN/README.md` and all `zh-CN/<skill>/SKILL.md` exist.
 
@@ -31,15 +31,15 @@ All **v4 atomic skill directories** and each `SKILL.md` frontmatter `name:` fiel
 > **Historical note:** v4.0.0 initially shipped directories `idea-forge`, `lit-scout`, … (no `ai-` prefix). v4.1.0 renames them to `ai-idea-forge`, `ai-lit-scout`, … The capability list below uses the **current** names.
 
 - **`ai-idea-forge`** (NEW) — AI/ML research idea generation with novelty/feasibility/risk scoring and Devil's Advocate stress-testing. Outputs ranked Idea Cards.
-- **`ai-lit-scout`** — Literature search, verification (Semantic Scholar / arXiv), annotated bibliography. Wraps `archive/v3/deep-research/agents/bibliography_agent`.
+- **`ai-lit-scout`** — Literature search, verification (Semantic Scholar / arXiv), annotated bibliography. Delegates to `shared/agents/bibliography_agent.md`.
 - **`ai-related-positioning`** (NEW) — Differentiate AI/ML work via 3-axis positioning matrix + reviewer-threat map + Related Work section draft.
-- **`ai-method-architect`** — Experimental design (hypotheses, conditions, baselines, controls, statistical plan, ablations, reproducibility spec). Wraps `archive/v3/deep-research/agents/research_architect_agent`.
-- **`ai-paper-writer`** — Section drafting with anti-leakage protocol and venue-aware style. Wraps `archive/v3/academic-paper/agents/draft_writer_agent` + `revision_coach_agent` + `abstract_bilingual_agent`.
-- **`ai-figure-smith`** — Reproducible figure code (matplotlib/tikz/mermaid) + VLM verification + alt text. Wraps `archive/v3/academic-paper/agents/visualization_agent`.
-- **`ai-integrity-check`** — Citation, claim, plagiarism, 7-mode AI failure-mode audit. Block-on-suspect verdict. Wraps `archive/v3/academic-pipeline/agents/integrity_verification_agent`.
-- **`ai-paper-reviewer`** — 5-perspective AI venue peer review (Methodology / Domain / Perspective / DA / EIC) in venue's review format. Wraps existing `archive/v3/academic-paper-reviewer/agents/`.
+- **`ai-method-architect`** — Experimental design (hypotheses, conditions, baselines, controls, statistical plan, ablations, reproducibility spec). Delegates to `shared/agents/research_architect_agent.md`.
+- **`ai-paper-writer`** — Section drafting with anti-leakage protocol and venue-aware style. Delegates to `shared/agents/draft_writer_agent.md`, `revision_coach_agent.md`, `abstract_bilingual_agent.md`.
+- **`ai-figure-smith`** — Reproducible figure code (matplotlib/tikz/mermaid) + VLM verification + alt text. Delegates to `shared/agents/visualization_agent.md`.
+- **`ai-integrity-check`** — Citation, claim, plagiarism, 7-mode AI failure-mode audit. Block-on-suspect verdict. Delegates to `shared/agents/integrity_verification_agent.md`.
+- **`ai-paper-reviewer`** — 5-perspective AI venue peer review (Methodology / Domain / Perspective / DA / EIC) in venue's review format. Delegates to reviewer agents under `shared/agents/`.
 - **`ai-rebuttal-coach`** (NEW) — OpenReview-style author response with priority matrix, per-reviewer drafts within venue word limits, revision plan, auditor.
-- **`ai-venue-formatter`** — Venue-compliant compilation + disclosure + reproducibility checklist + broader impact + camera-ready helper. Wraps `archive/v3/academic-paper/agents/formatter_agent`.
+- **`ai-venue-formatter`** — Venue-compliant compilation + disclosure + reproducibility checklist + broader impact + camera-ready helper. Delegates to `shared/agents/formatter_agent.md`.
 
 ### Added — Optional Meta-Skill
 
@@ -49,9 +49,10 @@ All **v4 atomic skill directories** and each `SKILL.md` frontmatter `name:` fiel
 
 - `shared/agents/socratic_mentor.md` — consolidated from 2 prior copies.
 - `shared/agents/devils_advocate.md` — consolidated from 2 prior copies.
-- `shared/agents/state_tracker.md` — promoted from `archive/v3/academic-pipeline/agents/`.
+- `shared/agents/state_tracker.md` — promoted from the v3.3 pipeline `state_tracker_agent` spec.
 - `shared/protocols/anti_sycophancy.md` — 4-Stop Rule reusable across skills.
-- `shared/protocols/integrity_protocol.md` — index pointing to v3 integrity infrastructure.
+- `shared/protocols/integrity_protocol.md` — index of canonical integrity protocols under `shared/references/`.
+- `shared/references/` — v4 canonical copies of cross-cutting protocols (integrity, disclosure, S2 API, failure modes, etc.).
 - `shared/venue_db/` — 8 YAML files: NeurIPS, ICLR, ICML, ACL, EMNLP, CVPR, AAAI, arXiv. Each declares page limits, template, review format, disclosure policy, reproducibility checklist URL, broader-impact requirements.
 
 ### Added — Documentation
@@ -80,7 +81,7 @@ All **v4 atomic skill directories** and each `SKILL.md` frontmatter `name:` fiel
 
 ### Deprecated (kept until 2026-10)
 
-- Top-level `archive/v3/deep-research/`, `archive/v3/academic-paper/`, `archive/v3/academic-paper-reviewer/`, `archive/v3/academic-pipeline/` SKILL.md files. Their agent files remain as references for v4.0 atomic skills.
+- Top-level `archive/v3/deep-research/`, `archive/v3/academic-paper/`, `archive/v3/academic-paper-reviewer/`, `archive/v3/academic-pipeline/` SKILL.md files (frozen snapshot). v4.0+ skills use **`shared/agents/`** and **`shared/references/`** instead of linking into `archive/v3/`.
 - v3.3 trigger phrases ("deep research", "academic paper", "academic pipeline") will route to closest v4.0 skill with one-line migration notice.
 
 ### Removed

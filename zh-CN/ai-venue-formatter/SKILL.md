@@ -56,18 +56,18 @@ flowchart TD
     Intake --> Convert --> Template --> Disclosure --> Repro --> Impact --> Compile --> Audit --> Anon --> Pkg
 ```
 
-## Agents（复用 v3）
+## Agents（`shared/agents`）
 
 | Agent | 文件 |
 |---|---|
-| `formatter_agent` | [`../../archive/v3/academic-paper/agents/formatter_agent.md`](../../archive/v3/academic-paper/agents/formatter_agent.md) |
-| `citation_compliance_agent` | [`../../archive/v3/academic-paper/agents/citation_compliance_agent.md`](../../archive/v3/academic-paper/agents/citation_compliance_agent.md) |
+| `formatter_agent` | [`../../shared/agents/formatter_agent.md`](../../shared/agents/formatter_agent.md) |
+| `citation_compliance_agent` | [`../../shared/agents/citation_compliance_agent.md`](../../shared/agents/citation_compliance_agent.md) |
 
 ## 关键协议
 
 - [`../../shared/venue_db/`](../../shared/venue_db/) — 页数、模板、清单 URL  
-- [`../../archive/v3/academic-paper/references/disclosure_mode_protocol.md`](../../archive/v3/academic-paper/references/disclosure_mode_protocol.md)  
-- [`../../archive/v3/academic-paper/references/venue_disclosure_policies.md`](../../archive/v3/academic-paper/references/venue_disclosure_policies.md)
+- [`../../shared/references/disclosure_mode_protocol.md`](../../shared/references/disclosure_mode_protocol.md)  
+- [`../../shared/references/venue_disclosure_policies.md`](../../shared/references/venue_disclosure_policies.md)
 
 ## 铁律
 

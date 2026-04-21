@@ -10,9 +10,9 @@ Learns the author's natural writing voice from past writing samples and applies 
 
 ## When to Use
 
-- **Primary entry point**: `archive/v3/academic-paper/agents/intake_agent` Step 10 (optional)
-- **Pipeline carry**: `academic-pipeline` Material Passport carries the Style Profile across all stages
-- **Consumers**: `archive/v3/academic-paper/agents/draft_writer_agent`, `archive/v3/deep-research/agents/report_compiler_agent`
+- **Primary entry point**: [`shared/agents/intake_agent.md`](agents/intake_agent.md) Step 10 (optional)
+- **Pipeline carry**: `ai-research-pipeline` / legacy pipeline Material Passport carries the Style Profile across stages
+- **Consumers**: [`shared/agents/draft_writer_agent.md`](agents/draft_writer_agent.md), [`shared/agents/report_compiler_agent.md`](agents/report_compiler_agent.md)
 
 ---
 

@@ -97,18 +97,18 @@ flowchart TD
 
 | Agent | Role | File |
 |---|---|---|
-| `draft_writer_agent` | Core section drafting | [`archive/v3/academic-paper/agents/draft_writer_agent.md`](../archive/v3/academic-paper/agents/draft_writer_agent.md) |
-| `revision_coach_agent` | Revision-mode prose editing | [`archive/v3/academic-paper/agents/revision_coach_agent.md`](../archive/v3/academic-paper/agents/revision_coach_agent.md) |
-| `abstract_bilingual_agent` | Optional bilingual abstract | [`archive/v3/academic-paper/agents/abstract_bilingual_agent.md`](../archive/v3/academic-paper/agents/abstract_bilingual_agent.md) |
-| `argument_builder_agent` | Discussion / Conclusion structuring | [`archive/v3/academic-paper/agents/argument_builder_agent.md`](../archive/v3/academic-paper/agents/argument_builder_agent.md) |
-| `structure_architect_agent` | Outline / re-organization | [`archive/v3/academic-paper/agents/structure_architect_agent.md`](../archive/v3/academic-paper/agents/structure_architect_agent.md) |
+| `draft_writer_agent` | Core section drafting | [`shared/agents/draft_writer_agent.md`](../shared/agents/draft_writer_agent.md) |
+| `revision_coach_agent` | Revision-mode prose editing | [`shared/agents/revision_coach_agent.md`](../shared/agents/revision_coach_agent.md) |
+| `abstract_bilingual_agent` | Optional bilingual abstract | [`shared/agents/abstract_bilingual_agent.md`](../shared/agents/abstract_bilingual_agent.md) |
+| `argument_builder_agent` | Discussion / Conclusion structuring | [`shared/agents/argument_builder_agent.md`](../shared/agents/argument_builder_agent.md) |
+| `structure_architect_agent` | Outline / re-organization | [`shared/agents/structure_architect_agent.md`](../shared/agents/structure_architect_agent.md) |
 | `socratic_mentor` (shared) | Plan-mode chapter dialogue | [`shared/agents/socratic_mentor.md`](../shared/agents/socratic_mentor.md) |
 
 ## Key Protocols
 
-- [`archive/v3/academic-paper/references/anti_leakage_protocol.md`](../archive/v3/academic-paper/references/anti_leakage_protocol.md) — IRON RULE: only cite facts present in `materials`
-- [`archive/v3/academic-paper/references/writing_quality_check.md`](../archive/v3/academic-paper/references/writing_quality_check.md) — anti-pattern lint
-- [`archive/v3/academic-paper/references/academic_writing_style.md`](../archive/v3/academic-paper/references/academic_writing_style.md) — voice matching to existing draft
+- [`shared/references/anti_leakage_protocol.md`](../shared/references/anti_leakage_protocol.md) — IRON RULE: only cite facts present in `materials`
+- [`shared/references/writing_quality_check.md`](../shared/references/writing_quality_check.md) — anti-pattern lint
+- [`shared/references/academic_writing_style.md`](../shared/references/academic_writing_style.md) — voice matching to existing draft
 - [`shared/venue_db/<venue>.yaml`](../shared/venue_db/) — venue-specific length and structure
 
 ## IRON RULES (from anti_leakage_protocol.md)

@@ -241,4 +241,4 @@ for {literature search / draft revision / integrity verification / rebuttal draf
 All scientific decisions, experimental design, and final text are the authors' responsibility.
 ```
 
-完整 AI 使用披露模板见 [`archive/v3/academic-paper/references/disclosure_mode_protocol.md`](archive/v3/academic-paper/references/disclosure_mode_protocol.md)（v4 inline 版本计划在 v4.1 引入）。
+完整 AI 使用披露模板见 [`shared/references/disclosure_mode_protocol.md`](shared/references/disclosure_mode_protocol.md)。

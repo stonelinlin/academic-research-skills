@@ -27,7 +27,7 @@ zh-CN/
 | **权威来源** | 英文版 `../ai-*/SKILL.md` 为规范；若与中文有歧义，以英文为准。 |
 | `name` 字段 | 与英文相同（`ai-idea-forge` 等），便于工具与路由一致。 |
 | `description` | 中文说明 + 保留英文触发短语（Triggers），便于自然语言匹配。 |
-| **Agent / 协议** | 正文仍引用 `../../ai-*/agents/`、`../../archive/v3/`、`../../shared/` 下的 **英文原文**；未单独翻译 agents。 |
+| **Agent / 协议** | 正文引用 `../../shared/agents/`、`../../shared/references/` 下的 **英文原文**；未单独翻译 agents。 |
 
 ## Claude Code / Cursor 如何使用
 

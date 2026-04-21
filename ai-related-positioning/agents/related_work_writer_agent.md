@@ -37,7 +37,7 @@ This paragraph deserves extra craft:
 
 If `references/concurrent_work_protocol.md` applies, use the dedicated phrasing — never use it as an excuse to skip a competitor.
 
-## Style Rules (per Anti-Patterns in `archive/v3/academic-paper/references/writing_quality_check.md`)
+## Style Rules (per Anti-Patterns in [`shared/references/writing_quality_check.md`](../../shared/references/writing_quality_check.md))
 
 - No "delve into", "crucial", "it is important to note"
 - ≤ 2 em dashes per page

@@ -163,10 +163,10 @@ not a duplication of their contents.
 
 | Mechanism | Where it lives |
 |---|---|
-| Source verification (S2 API) | `archive/v3/deep-research/references/semantic_scholar_api_protocol.md` |
-| Anti-leakage protocol | `archive/v3/academic-paper/references/anti_leakage_protocol.md` |
-| Integrity gates (Stage 2.5/4.5) + 7-mode failure checklist | `archive/v3/academic-pipeline/references/ai_research_failure_modes.md` |
-| Reviewer calibration mode (FNR/FPR with private gold set) | `archive/v3/academic-paper-reviewer/references/calibration_mode_protocol.md` |
+| Source verification (S2 API) | [`references/semantic_scholar_api_protocol.md`](references/semantic_scholar_api_protocol.md) |
+| Anti-leakage protocol | [`references/anti_leakage_protocol.md`](references/anti_leakage_protocol.md) |
+| Integrity gates (Stage 2.5/4.5) + 7-mode failure checklist | [`references/ai_research_failure_modes.md`](references/ai_research_failure_modes.md) |
+| Reviewer calibration mode (FNR/FPR with private gold set) | [`references/calibration_mode_protocol.md`](references/calibration_mode_protocol.md) |
 | Cross-model verification | `shared/cross_model_verification.md` |
 | Declarative posture | `shared/handoff_schemas.md` (`data_access_level` and `task_type` sections) |
 

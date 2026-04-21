@@ -114,12 +114,12 @@ flowchart TD
 
 | Agent | Role | File |
 |---|---|---|
-| `visualization_agent` | Core chart generation + design | [`archive/v3/academic-paper/agents/visualization_agent.md`](../archive/v3/academic-paper/agents/visualization_agent.md) |
+| `visualization_agent` | Core chart generation + design | [`shared/agents/visualization_agent.md`](../shared/agents/visualization_agent.md) |
 
 ## Key Protocols
 
-- [`archive/v3/academic-paper/references/vlm_figure_verification.md`](../archive/v3/academic-paper/references/vlm_figure_verification.md) — VLM-based rendering audit
-- [`archive/v3/academic-paper/references/statistical_visualization_standards.md`](../archive/v3/academic-paper/references/statistical_visualization_standards.md) — quality checklist
+- [`shared/references/vlm_figure_verification.md`](../shared/references/vlm_figure_verification.md) — VLM-based rendering audit
+- [`shared/references/statistical_visualization_standards.md`](../shared/references/statistical_visualization_standards.md) — quality checklist
 - [`shared/venue_db/<venue>.yaml`](../shared/venue_db/) — venue typography and layout
 
 ## IRON RULES

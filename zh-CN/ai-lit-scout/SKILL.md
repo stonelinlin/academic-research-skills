@@ -55,18 +55,18 @@ flowchart TD
     Intake --> Search --> Filter --> Verify --> Annotate --> Cluster --> Gap --> Output
 ```
 
-## Agents（复用 v3）
+## Agents（`shared/agents`）
 
 | Agent | 角色 | 文件 |
 |---|---|---|
-| `bibliography_agent` | 多源检索与注释 | [`../../archive/v3/deep-research/agents/bibliography_agent.md`](../../archive/v3/deep-research/agents/bibliography_agent.md) |
-| `source_verification_agent` | 标题/DOI/被引数核验 | [`../../archive/v3/deep-research/agents/source_verification_agent.md`](../../archive/v3/deep-research/agents/source_verification_agent.md) |
+| `bibliography_agent` | 多源检索与注释 | [`../../shared/agents/bibliography_agent.md`](../../shared/agents/bibliography_agent.md) |
+| `source_verification_agent` | 标题/DOI/被引数核验 | [`../../shared/agents/source_verification_agent.md`](../../shared/agents/source_verification_agent.md) |
 | `socratic_mentor`（共享） | 主题过宽时 | [`../../shared/agents/socratic_mentor.md`](../../shared/agents/socratic_mentor.md) |
 
 ## 关键协议
 
-- [`../../archive/v3/deep-research/references/semantic_scholar_api_protocol.md`](../../archive/v3/deep-research/references/semantic_scholar_api_protocol.md)
-- [`../../archive/v3/deep-research/references/cross_agent_quality_definitions.md`](../../archive/v3/deep-research/references/cross_agent_quality_definitions.md)
+- [`../../shared/references/semantic_scholar_api_protocol.md`](../../shared/references/semantic_scholar_api_protocol.md)
+- [`../../shared/references/cross_agent_quality_definitions.md`](../../shared/references/cross_agent_quality_definitions.md)
 - [`../../shared/protocols/integrity_protocol.md`](../../shared/protocols/integrity_protocol.md)
 
 ## 铁律

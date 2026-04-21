@@ -55,15 +55,15 @@ flowchart TD
     Intake --> Plan --> Draft --> Style --> Cite --> Length --> Output
 ```
 
-## Agents（复用 v3）
+## Agents（`shared/agents`）
 
-见英文版表格：`draft_writer_agent`、`revision_coach_agent`、`abstract_bilingual_agent`、`argument_builder_agent`、`structure_architect_agent`、`socratic_mentor`。路径前缀：`../../archive/v3/academic-paper/agents/` 与 `../../shared/agents/`。
+见英文版表格：`draft_writer_agent`、`revision_coach_agent`、`abstract_bilingual_agent`、`argument_builder_agent`、`structure_architect_agent`、`socratic_mentor`。路径前缀：`../../shared/agents/`。
 
 ## 关键协议
 
-- [`../../archive/v3/academic-paper/references/anti_leakage_protocol.md`](../../archive/v3/academic-paper/references/anti_leakage_protocol.md) — **铁律**：材料中无则文中无。  
-- [`../../archive/v3/academic-paper/references/writing_quality_check.md`](../../archive/v3/academic-paper/references/writing_quality_check.md)  
-- [`../../archive/v3/academic-paper/references/academic_writing_style.md`](../../archive/v3/academic-paper/references/academic_writing_style.md)  
+- [`../../shared/references/anti_leakage_protocol.md`](../../shared/references/anti_leakage_protocol.md) — **铁律**：材料中无则文中无。  
+- [`../../shared/references/writing_quality_check.md`](../../shared/references/writing_quality_check.md)  
+- [`../../shared/references/academic_writing_style.md`](../../shared/references/academic_writing_style.md)  
 - [`../../shared/venue_db/`](../../shared/venue_db/)
 
 ## 模式

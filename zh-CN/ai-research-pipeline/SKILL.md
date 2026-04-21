@@ -53,7 +53,7 @@ flowchart LR
 
 | Agent | 文件 |
 |---|---|
-| `pipeline_orchestrator_agent` | [`../../archive/v3/academic-pipeline/agents/pipeline_orchestrator_agent.md`](../../archive/v3/academic-pipeline/agents/pipeline_orchestrator_agent.md) |
+| `pipeline_orchestrator_agent` | [`../../shared/agents/pipeline_orchestrator_agent.md`](../../shared/agents/pipeline_orchestrator_agent.md) |
 | `state_tracker`（共享） | [`../../shared/agents/state_tracker.md`](../../shared/agents/state_tracker.md) |
 
 ## 铁律
@@ -71,5 +71,5 @@ flowchart LR
 "resume pipeline at stage 6"
 ```
 
-- [`../../archive/v3/academic-pipeline/`](../../archive/v3/academic-pipeline/)（v3 legacy）  
+- [`../../archive/v3/academic-pipeline/`](../../archive/v3/academic-pipeline/)（v3.3 冻结快照，仅供对照）  
 - [`../../docs/COMMAND_INDEX.md`](../../docs/COMMAND_INDEX.md)

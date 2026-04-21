@@ -57,12 +57,12 @@ flowchart TD
     Intake --> Hypoth --> Var --> Models --> Base --> Metric --> Stats --> Abl --> Repro --> Output
 ```
 
-## Agents（复用 v3）
+## Agents（`shared/agents`）
 
 | Agent | 角色 | 文件 |
 |---|---|---|
-| `research_architect_agent` | 核心实验设计 | [`../../archive/v3/deep-research/agents/research_architect_agent.md`](../../archive/v3/deep-research/agents/research_architect_agent.md) |
-| `risk_of_bias_agent` | 混杂与偏倚 | [`../../archive/v3/deep-research/agents/risk_of_bias_agent.md`](../../archive/v3/deep-research/agents/risk_of_bias_agent.md) |
+| `research_architect_agent` | 核心实验设计 | [`../../shared/agents/research_architect_agent.md`](../../shared/agents/research_architect_agent.md) |
+| `risk_of_bias_agent` | 混杂与偏倚 | [`../../shared/agents/risk_of_bias_agent.md`](../../shared/agents/risk_of_bias_agent.md) |
 | `devils_advocate`（共享） | 协议压力测试 | [`../../shared/agents/devils_advocate.md`](../../shared/agents/devils_advocate.md) |
 
 ## 铁律

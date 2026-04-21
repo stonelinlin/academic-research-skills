@@ -56,12 +56,12 @@ flowchart TD
 
 | Agent | 文件 |
 |---|---|
-| `visualization_agent` | [`../../archive/v3/academic-paper/agents/visualization_agent.md`](../../archive/v3/academic-paper/agents/visualization_agent.md) |
+| `visualization_agent` | [`../../shared/agents/visualization_agent.md`](../../shared/agents/visualization_agent.md) |
 
 ## 协议
 
-- [`../../archive/v3/academic-paper/references/vlm_figure_verification.md`](../../archive/v3/academic-paper/references/vlm_figure_verification.md)  
-- [`../../archive/v3/academic-paper/references/statistical_visualization_standards.md`](../../archive/v3/academic-paper/references/statistical_visualization_standards.md)  
+- [`../../shared/references/vlm_figure_verification.md`](../../shared/references/vlm_figure_verification.md)  
+- [`../../shared/references/statistical_visualization_standards.md`](../../shared/references/statistical_visualization_standards.md)  
 - [`../../shared/venue_db/`](../../shared/venue_db/)
 
 ## 铁律
