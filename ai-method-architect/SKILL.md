@@ -2,7 +2,7 @@
 name: ai-method-architect
 description: "Design experiments and methodology for AI/ML papers. Inputs: research question + claim + constraints. Outputs: experimental protocol (hypotheses, conditions, baselines, metrics, controls), pre-registration template, ablation plan, statistical analysis plan, reproducibility specification. Triggers: design experiment, methodology, experimental design, ablation plan, design study, 设计实验, 实验方案, 方法设计."
 metadata:
-  version: "4.1.0"
+  version: "4.1.1"
   domain: ai-ml
   data_access_level: redacted
   task_type: outcome-gradable

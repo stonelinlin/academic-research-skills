@@ -2,7 +2,7 @@
 name: ai-paper-reviewer
 description: "Multi-perspective AI/ML paper review. Inputs: paper draft + venue. Outputs: 5 reviewer reports (Methodology / Domain / Perspective / Devil's Advocate / EIC) in venue's review format with scoring rubric and meta-review. Triggers: review my paper, peer review, simulate review, OpenReview review, NeurIPS reviewer, paper critique, calibrate reviewer, 审稿, 同行评审, 模拟审稿, 论文评审."
 metadata:
-  version: "4.1.0"
+  version: "4.1.1"
   domain: ai-ml
   data_access_level: redacted
   task_type: outcome-gradable

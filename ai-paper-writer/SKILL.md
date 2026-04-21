@@ -2,7 +2,7 @@
 name: ai-paper-writer
 description: "Draft AI/ML paper sections from a research artifact (results, method, related work, abstract, intro, conclusion). Inputs: section type + materials (results CSVs, method notes, citations). Outputs: section draft in venue style with anti-leakage protocol, optional bilingual abstract, revision tracking. Triggers: write paper, draft section, write abstract, write method, write conclusion, polish paper, paper revision, 写论文, 起草论文, 写摘要, 修改论文."
 metadata:
-  version: "4.1.0"
+  version: "4.1.1"
   domain: ai-ml
   data_access_level: redacted
   task_type: outcome-gradable

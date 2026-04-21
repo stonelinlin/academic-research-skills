@@ -2,7 +2,7 @@
 name: ai-rebuttal-coach
 description: "Draft and prioritize rebuttals to AI/ML conference reviewers. Inputs: reviews + manuscript + venue. Outputs: per-reviewer responses respecting venue word limits, priority matrix (which concerns to address first), revision plan with line-level manuscript edits. Triggers: write rebuttal, respond to reviewers, OpenReview response, NeurIPS rebuttal, ICLR author response, 撰写 rebuttal, 回复评审."
 metadata:
-  version: "4.1.0"
+  version: "4.1.1"
   domain: ai-ml
   data_access_level: redacted
   task_type: outcome-gradable

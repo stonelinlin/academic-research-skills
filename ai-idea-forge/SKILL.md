@@ -2,7 +2,7 @@
 name: ai-idea-forge
 description: "Generate and stress-test AI/ML research ideas. Inputs: interest area, constraints (compute/data/timeline), optional past papers. Outputs: ranked Idea Cards with novelty/feasibility/risk scores, minimum experiments, and Devil's Advocate critique. Triggers: give me ideas, brainstorm research, novelty check, idea evaluation, find research direction, 想 idea, 找研究方向, 评估新颖度."
 metadata:
-  version: "4.1.0"
+  version: "4.1.1"
   domain: ai-ml
   data_access_level: raw
   task_type: open-ended

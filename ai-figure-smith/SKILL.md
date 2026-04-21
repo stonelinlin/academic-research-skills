@@ -2,7 +2,7 @@
 name: ai-figure-smith
 description: "Design, generate, and verify figures and tables for AI/ML papers. Inputs: data (CSV/JSON) + chart-intent (comparison, distribution, ablation, qualitative) + venue. Outputs: matplotlib/tikz code, alt text, caption draft, VLM verification report. Triggers: make figure, plot results, design chart, paper figure, table for paper, qualitative figure, 画图, 做图表, 论文配图, 设计图表."
 metadata:
-  version: "4.1.0"
+  version: "4.1.1"
   domain: ai-ml
   data_access_level: redacted
   task_type: outcome-gradable

@@ -48,6 +48,11 @@ EXPECTED_SHARED = [
     "shared/venue_db/README.md",
 ]
 
+EXPECTED_ZH_CN_SKILLS = [
+    "zh-CN/README.md",
+    *[f"zh-CN/{s}/SKILL.md" for s in ATOMIC_SKILLS + META_SKILLS],
+]
+
 EXPECTED_VENUE_YAMLS = [
     "shared/venue_db/neurips.yaml",
     "shared/venue_db/iclr.yaml",
@@ -90,14 +95,20 @@ def check_changelog() -> None:
         fail("CHANGELOG.md missing")
         return
     text = changelog.read_text(encoding="utf-8")
-    if "[4.1.0]" not in text and "[4.0.0]" not in text:
-        fail("CHANGELOG.md missing [4.1.0] or [4.0.0] entry")
+    if "[4.1.1]" not in text and "[4.1.0]" not in text and "[4.0.0]" not in text:
+        fail("CHANGELOG.md missing [4.1.1], [4.1.0], or [4.0.0] entry")
 
 
 def check_docs_exist() -> None:
     for doc in EXPECTED_DOCS:
         if not (ROOT / doc).is_file():
             fail(f"missing doc: {doc}")
+
+
+def check_zh_cn_skills() -> None:
+    for f in EXPECTED_ZH_CN_SKILLS:
+        if not (ROOT / f).is_file():
+            fail(f"missing zh-CN skill doc: {f}")
 
 
 def check_shared_exists() -> None:
@@ -114,6 +125,7 @@ def main() -> int:
     check_readme_mentions()
     check_changelog()
     check_docs_exist()
+    check_zh_cn_skills()
     check_shared_exists()
 
     if ERRORS:
@@ -123,7 +135,8 @@ def main() -> int:
         return 1
     print(
         f"PASS: {len(ATOMIC_SKILLS)} atomic skills, {len(META_SKILLS)} meta skills, "
-        f"{len(EXPECTED_DOCS)} docs, {len(EXPECTED_VENUE_YAMLS)} venue YAMLs all present and referenced."
+        f"{len(EXPECTED_DOCS)} docs, {len(EXPECTED_ZH_CN_SKILLS)} zh-CN files, "
+        f"{len(EXPECTED_VENUE_YAMLS)} venue YAMLs all present and referenced."
     )
     return 0
 

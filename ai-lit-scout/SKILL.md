@@ -2,7 +2,7 @@
 name: ai-lit-scout
 description: "AI/ML literature search, verification, and annotated bibliography. Inputs: research question or topic + venue tags + recency constraint. Outputs: verified citations (Semantic Scholar / arxiv), per-paper annotation (claim, method, evidence quality), citation graph, gap notes. Triggers: literature review, find papers, search related work, citation search, build bibliography, 文献调研, 查找论文, 文献综述, 找相关工作."
 metadata:
-  version: "4.1.0"
+  version: "4.1.1"
   domain: ai-ml
   data_access_level: redacted
   task_type: outcome-gradable

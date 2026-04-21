@@ -2,7 +2,7 @@
 name: ai-research-pipeline
 description: "Optional meta-skill that orchestrates the full AI/ML research workflow: idea -> lit -> method -> writing -> integrity -> review -> rebuttal -> camera-ready. Use ONLY when the user explicitly wants the orchestrated journey; otherwise invoke atomic skills directly. Triggers: full pipeline, end-to-end paper, research to publication, complete workflow, orchestrated research, 完整研究流程, 端到端论文, 全流程引导."
 metadata:
-  version: "4.1.0"
+  version: "4.1.1"
   domain: ai-ml
   data_access_level: redacted
   task_type: outcome-gradable

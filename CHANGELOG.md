@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.1.1] - 2026-04-20
+
+### Added
+
+- **`zh-CN/`** — Simplified Chinese translations of all 11 v4 skill `SKILL.md` files (`zh-CN/ai-*/SKILL.md`) plus `zh-CN/README.md` explaining layout, symlink strategy for Claude Code/Cursor, and that `agents/` / `archive/` / `shared/` remain English-only.
+- **`metadata.language: zh-CN`** on each translated `SKILL.md` frontmatter.
+- **CI**: `scripts/check_spec_consistency.py` now asserts `zh-CN/README.md` and all `zh-CN/<skill>/SKILL.md` exist.
+
+### Changed
+
+- Root **`README.md`**: version badge **v4.1.1**; new subsection linking to `zh-CN/`.
+
 ## [4.1.0] - 2026-04-20 — BREAKING (directory naming)
 
 All **v4 atomic skill directories** and each `SKILL.md` frontmatter `name:` field now use a uniform **`ai-` prefix** (e.g. `idea-forge` → `ai-idea-forge`, `lit-scout` → `ai-lit-scout`, …, `research-pipeline` → `ai-research-pipeline`). This namespaces skills when installed as direct children of `~/.claude/skills/` or `~/.cursor/skills/` and avoids collisions with unrelated folders.

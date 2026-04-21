@@ -1,6 +1,6 @@
 # ai-research-skills
 
-[![Version](https://img.shields.io/badge/version-v4.1.0-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v4.1.1-blue)](CHANGELOG.md)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
 
 > **10 个原子 skill（目录统一 `ai-` 前缀），专为 AI/ML 科研论文流程而生。**
@@ -25,6 +25,10 @@
 | 走完整流程 | "full pipeline for this idea" / "全流程" | [`ai-research-pipeline`](ai-research-pipeline/) (可选 meta) |
 
 完整触发词与消歧规则见 [`docs/COMMAND_INDEX.md`](docs/COMMAND_INDEX.md)。
+
+### 简体中文 Skill 文档
+
+各 skill 的 **`SKILL.md` 完整中文说明**（简体）位于 [`zh-CN/`](zh-CN/README.md)，目录结构与根目录 `ai-*` 一一对应；`agents/`、`archive/`、`shared/` 仍以英文原文为准，中文文件内已用相对路径链回仓库。
 
 ---
 
@@ -164,6 +168,8 @@ ai-research-skills/
 │   ├── COMMAND_INDEX.md         完整触发词、消歧、handoff 链
 │   ├── AI_VENUE_GUIDE.md        AI venue 人工可读指南（venue_db 的 companion）
 │   └── MIGRATION_v3_to_v4.md    v3.3 → v4.0 完整迁移映射
+│
+├── zh-CN/                       各 ai-* skill 的简体中文 SKILL.md 译本 + README
 │
 ├── scripts/                     CI lint 脚本
 │   ├── check_skill_md_length.py

@@ -2,7 +2,7 @@
 name: ai-integrity-check
 description: "Verify citations, claims, data, and reproducibility in an AI/ML paper draft. Inputs: draft + materials + (optional) source files. Outputs: per-claim verification status, citation API check, plagiarism scan, 7-mode AI failure-mode audit, reproducibility checklist. Triggers: integrity check, verify citations, fact check paper, citation audit, plagiarism check, reproducibility audit, 完整性检查, 验证引用, 论文核查."
 metadata:
-  version: "4.1.0"
+  version: "4.1.1"
   domain: ai-ml
   data_access_level: redacted
   task_type: outcome-gradable

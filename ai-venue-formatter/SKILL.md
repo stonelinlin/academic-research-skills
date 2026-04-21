@@ -2,7 +2,7 @@
 name: ai-venue-formatter
 description: "Compile AI/ML paper draft to venue-compliant LaTeX/PDF + handle disclosure, reproducibility checklist, broader impact, camera-ready helper. Inputs: draft + venue + figures + bib. Outputs: compiled PDF, formatted source, completed disclosure/reproducibility/broader-impact sections, submission package. Triggers: format paper, compile paper, prepare submission, NeurIPS template, ICLR template, camera ready, reproducibility checklist, AI disclosure, broader impact, 排版论文, 提交准备, 投稿包."
 metadata:
-  version: "4.1.0"
+  version: "4.1.1"
   domain: ai-ml
   data_access_level: redacted
   task_type: outcome-gradable

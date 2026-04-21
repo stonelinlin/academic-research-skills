@@ -2,7 +2,7 @@
 name: ai-related-positioning
 description: "Position your AI/ML work against existing papers. Inputs: 1-page method description + 5-15 candidate overlap papers. Outputs: positioning matrix (method/data/claim differences), citation strategy (must-cite vs contrast-cite vs skip), Related Work section draft. Triggers: position against, differentiation, related work, how is my work different, compare to existing, 差异化定位, 与已有工作对比."
 metadata:
-  version: "4.1.0"
+  version: "4.1.1"
   domain: ai-ml
   data_access_level: redacted
   task_type: outcome-gradable
